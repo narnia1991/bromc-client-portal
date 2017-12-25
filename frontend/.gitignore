@@ -9,7 +9,8 @@
 # production
 /build
 
-
+# publish
+/dist
 
 # misc
 .DS_Store
