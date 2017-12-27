@@ -6,4 +6,4 @@
 */
 const baseURL = '127.0.0.1:8008/'
 
-export  { baseURL }
+export { baseURL }
