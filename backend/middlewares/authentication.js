@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: authentication.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2017-12-30T05:06:44+08:00
+ * @Last modified time: 2017-12-30T05:13:58+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -19,7 +19,15 @@ const authenticator = async (req, res, next) => {
   if (token) {
     try {
       const withToken = await jwt.verify(token, config.SECRET)
-      req.userId = withToken.user_id
+      const user = await user.getWhere({ user_id: withToken.user_id })
+      if (!user) res.status(404).json({ error: 'Not Found' })
+      else
+        req.currentUser = {
+          user_id: user.user_id,
+          user_info_id: user.user_info_id,
+          username: user.username,s
+          display_name: user.display_name
+        }
       next()
     } catch (err) {
       res.status(401).json({ error: 'Failed to Authenticate' })

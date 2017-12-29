@@ -4,13 +4,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AuthActions.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2017-12-30T04:40:42+08:00
+ * @Last modified time: 2017-12-30T05:27:30+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import axios from 'axios'
-import jwt from 'jsonwebtoken'
+import jwtDecode from 'jwt-decode'
 import SetAuthorizationToken from '../utils/SetAuthorizationToken'
 
 export const logout = () => {
@@ -23,5 +23,5 @@ export const login = async data => {
   const token = res.data.token
   localStorage.setItem('jwtToken', token)
   SetAuthorizationToken(token)
-  console.log(jwt.decode(token))
+  console.log(jwtDecode(token))
 }
