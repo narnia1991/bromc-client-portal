@@ -1,8 +1,8 @@
 /*
 * @Author: Narnia
 * @Date:   2017-12-09 01:05:05
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T15:09:53+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2017-12-30T03:24:43+08:00
 */
 import bcrypt from 'bcrypt-nodejs'
 const knex = require('./knex')
@@ -38,7 +38,6 @@ module.exports = {
       .del()
   },
   hasher: password => {
-    console.log(password)
     const salt = bcrypt.genSaltSync(5)
     const encrypted = bcrypt.hashSync(password, salt)
     return encrypted

@@ -8,3 +8,14 @@
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
+import express from 'express'
+import * as passwordController from '../controllers/password_history'
+const router = express.Router()
+
+/* GET home page. */
+
+router
+  .get('/', passwordController.getPasswords)
+  .post('/', passwordController.postPassword)
+
+module.exports = router

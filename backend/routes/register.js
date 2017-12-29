@@ -14,6 +14,8 @@ import * as userInfoController from '../controllers/user_info'
 import * as userController from '../controllers/user'
 import * as medHisController from '../controllers/medical_history'
 import * as therSessController from '../controllers/thersess_options'
+import * as registerController from '../controllers/registration'
+
 const router = express.Router()
 
 router
@@ -25,7 +27,13 @@ router
   .get('/:id/medical-history/latest', medHisController.getLatestMedHistory)
   .get('/:id/medical-history', medHisController.getMedHistory)
   .post('/medical-history', medHisController.postMedHistory)
-  .get('/:therapyId/therapy-options', therSessController.getTherapyOptions)
+  .get(
+    '/:therapyId/therapy-options',
+    therSessController.getLatestTherapyOptions
+  )
+  .post('/therapy-options', therSessController.postTherapyOptions)
+
+module.exports = router
   .post('/therapy-options', therSessController.postTherapyOptions)
 
 module.exports = router
