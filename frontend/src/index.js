@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react'
 // import { render } from 'react-dom'
 // import { connect, Provider } from 'react-redux'
@@ -94,3 +95,27 @@ registerServiceWorker()
 //   document.getElementById('root')
 // )
 // registerServiceWorker()
+=======
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2017-12-24T02:31:31+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: index.js
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2017-12-30T05:29:58+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
+import 'semantic-ui-css/semantic.min.css'
+import SetAuthorizationToken from './utils/SetAuthorizationToken'
+
+if (localStorage.jwtToken) SetAuthorizationToken(localStorage.jwtToken)
+ReactDOM.render(<App />, document.getElementById('root'))
+registerServiceWorker()
+>>>>>>> 762f9a40bf1e663e9aeb3b8ac17a427ee3df5429

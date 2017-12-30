@@ -1,5 +1,5 @@
 {
-  "name": "web-app-server",
+  "name": "bromc-rest-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -13,12 +13,22 @@
   "description": "",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "connect-ensure-login": "^0.1.1",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "express-mysql-session": "^1.2.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.1.0",
     "knex": "^0.14.2",
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "validator": "^9.2.0"
   }
 }

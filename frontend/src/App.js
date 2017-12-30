@@ -33,6 +33,7 @@ class App extends Component {
     const { activeItem, visible, icon, dateTime } = this.state
 
     const isError = !!(location && this.previousLocation !== location)
+console.log(location);
 
     return (
       <div style={{ height: '100%', background: '#eee' }}>
