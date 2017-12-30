@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Route, Redirect } from 'react-router-dom'
 import { Sidebar, Segment, Header } from 'semantic-ui-react'
@@ -11,7 +11,15 @@ const propTypes = {
   visible: PropTypes.bool,
 }
 
-function Layout({ component: Component, visibility, icon, visible, ...rest }) {
+function Layout(props) {
+  const {
+    routeComponent: Component,
+    visibility,
+    icon,
+    visible,
+    ...rest
+  } = props
+
   return (
     <Route
       {...rest}
@@ -19,8 +27,11 @@ function Layout({ component: Component, visibility, icon, visible, ...rest }) {
         <div>
           <NavHeader visibility={visibility} icon={icon} />
 
-          <Sidebar.Pushable as={Segment} style={{ minHeight: '100vh', marginTop: 0 }}>
-            <NavSidebar visible={visible} />
+          <Sidebar.Pushable
+            as={Segment}
+            style={{ minHeight: '100vh', marginTop: 0 }}
+          >
+            <NavSidebar visible={visible} {...props} />
             <Sidebar.Pusher>
               <Segment basic>
                 <Component {...props} />
@@ -48,3 +59,26 @@ function Layout({ component: Component, visibility, icon, visible, ...rest }) {
 // }
 
 export default Layout
+
+{
+  /* <Route
+{...rest}
+render={props => (
+  <div>
+    <NavHeader visibility={visibility} icon={icon} />
+
+    <Sidebar.Pushable
+      as={Segment}
+      style={{ minHeight: '100vh', marginTop: 0 }}
+    >
+      <NavSidebar visible={visible} {...props} />
+      <Sidebar.Pusher>
+        <Segment basic>
+          <Component {...props} />
+        </Segment>
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
+  </div>
+)}
+/> */
+}

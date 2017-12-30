@@ -5,6 +5,8 @@ import routes from './../../routes'
 
 class Dashboard extends Component {
   render() {
+    console.log('DASHBOARD', this.props)
+
     return (
       <Switch>
         {routes.map((route, index) => {
@@ -12,15 +14,29 @@ class Dashboard extends Component {
             return route.subRoute.map((subRoute, subIndex) => {
               if (subRoute.access === true) {
                 if (subRoute.rootPath) {
-                  return <Route key={subIndex} {...subRoute} path={subRoute.rootPath} />
+                  return (
+                    <Route
+                      key={subIndex}
+                      {...subRoute}
+                      path={subRoute.rootPath}
+                    />
+                  )
                 } else {
-                  return <Route key={subIndex} {...subRoute} path={`${route.path}/${subRoute.path}`} />
+                  return (
+                    <Route
+                      key={subIndex}
+                      {...subRoute}
+                      path={`${route.path}/${subRoute.path}`}
+                    />
+                  )
                 }
               } else {
                 return null
               }
             })
           } else if (route.access === true) {
+            console.log(this.props, 'DASHBOARDS')
+
             return <Route key={index} {...route} />
           } else {
             return null
