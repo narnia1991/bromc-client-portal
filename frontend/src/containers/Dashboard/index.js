@@ -5,8 +5,6 @@ import routes from './../../routes'
 
 class Dashboard extends Component {
   render() {
-    console.log('DASHBOARD', this.props)
-
     return (
       <Switch>
         {routes.map((route, index) => {
@@ -35,8 +33,6 @@ class Dashboard extends Component {
               }
             })
           } else if (route.access === true) {
-            console.log(this.props, 'DASHBOARDS')
-
             return <Route key={index} {...route} />
           } else {
             return null
@@ -54,21 +50,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard
-
-{
-  /* <div>
-  <NavHeader visibility={() => this.toggleVisibility} icon={icon} />
-
-  <Sidebar.Pushable
-    as={Segment}
-    style={{ minHeight: '100vh', marginTop: 0 }}
-  >
-    <NavSidebar visible={visible} />
-    <Sidebar.Pusher>
-      <Segment basic>
-        <Header as="h3">Application Content</Header>
-      </Segment>
-    </Sidebar.Pusher>
-  </Sidebar.Pushable>
-</div> */
-}

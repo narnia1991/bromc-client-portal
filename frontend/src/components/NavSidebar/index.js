@@ -19,9 +19,9 @@ export default class NavSidebar extends Component {
     visible: PropTypes.bool,
   }
 
-  state = { activeIndex: null }
+  state = { activeIndex: null, activeItem: 'Reports' }
 
-  handleToggleDropdown = (index, route) => {
+  handleToggleDropdown = (index, name) => {
     if (this.state.activeIndex === index) {
       this.setState({ activeIndex: null })
     } else {
@@ -29,76 +29,86 @@ export default class NavSidebar extends Component {
     }
   }
 
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   render() {
-    const { activeIndex } = this.state
+    const { activeItem, activeIndex } = this.state
 
     const { visible, match } = this.props
 
     return (
-      <Sidebar
-        as={Menu}
-        animation="push"
-        width="thin"
-        visible={visible}
-        icon="labeled"
-        vertical
-      >
-        {routes &&
-          routes.length > 0 &&
-          routes.map((item, index) => {
-            if (item.access) {
-              if (item.subRoute) {
-                return (
-                  <Menu.Item key={index}>
-                    <Menu.Header
-                      role="button"
-                      onClick={() => this.handleToggleDropdown(index)}
+      <Sidebar animation="push" width="thin" visible={visible} icon="labeled">
+        <Menu fluid vertical tabular>
+          {routes &&
+            routes.length > 0 &&
+            routes.map((item, index) => {
+              if (item.access) {
+                if (item.subRoute) {
+                  return (
+                    <Menu.Item
+                      key={index}
+                      name={item.name}
+                      active={activeItem === item.name}
+                      // role="button"
                     >
-                      <Icon name="home" />
-                      {item.name}
-                    </Menu.Header>
-                    {item.subRoute &&
-                    item.subRoute.length &&
-                    activeIndex === index ? (
-                      <FaAngleUp />
-                    ) : (
-                      <FaAngleDown />
-                    )}
-
-                    {item.subRoute &&
-                      item.subRoute.length > 0 &&
-                      item.subRoute.map((itemSub, indexSub) => {
-                        return (
-                          <Menu.Item
-                            key={indexSub}
-                            // as={NavLink}
-                            // role="button"
-                            // to={itemSub.path}
-                            style={{
-                              display: activeIndex === index ? 'block' : 'none',
-                            }}
-                          >
-                            <NavLink to={itemSub.path}>{itemSub.name}</NavLink>
-                          </Menu.Item>
-                        )
-                      })}
-                  </Menu.Item>
-                )
+                      <Menu.Header
+                        onClick={() => {
+                          this.handleToggleDropdown(index), this.handleItemClick
+                        }}
+                      >
+                        {item.name}
+                        {item.subRoute &&
+                        item.subRoute.length &&
+                        activeItem === item.name ? (
+                          <FaAngleUp />
+                        ) : (
+                          <FaAngleDown />
+                        )}
+                      </Menu.Header>
+                      {item.subRoute &&
+                        item.subRoute.length > 0 &&
+                        item.subRoute.map((itemSub, indexSub) => {
+                          return (
+                            <Menu.Menu key={indexSub}>
+                              <Menu.Item
+                                // as={NavLink}
+                                // role="button"
+                                // to={itemSub.rootPath || itemSub.path}
+                                style={{
+                                  display:
+                                    activeIndex === index ? 'block' : 'none',
+                                }}
+                                name={itemSub.name}
+                                active={activeItem === itemSub.name}
+                              >
+                                <Link to={itemSub.rootPath || itemSub.path}>
+                                  {itemSub.name}
+                                </Link>
+                              </Menu.Item>
+                            </Menu.Menu>
+                          )
+                        })}
+                    </Menu.Item>
+                  )
+                } else {
+                  return (
+                    <Menu.Item
+                      key={index}
+                      as={NavLink}
+                      to={item.path}
+                      name={item.name}
+                      active={activeItem === item.name}
+                      onClick={this.handleItemClick}
+                    >
+                      <Menu.Header>{item.name}</Menu.Header>
+                    </Menu.Item>
+                  )
+                }
               } else {
-                return (
-                  <Menu.Item
-                    key={index}
-                    // as={NavLink} to={item.path}
-                  >
-                    <Icon name="home" />
-                    <NavLink to={item.path}> {item.name}</NavLink>
-                  </Menu.Item>
-                )
+                return null
               }
-            } else {
-              return null
-            }
-          })}
+            })}
+        </Menu>
       </Sidebar>
     )
   }
