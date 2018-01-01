@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { Switch, Route } from 'react-router-dom'
 
 import asyncComponent from './containers/AsyncComponent'
@@ -14,13 +13,21 @@ class App extends Component {
 
   previousLocation = this.props.location
 
-  componentWillUpdate(nextProps) {
-    const { location } = this.props
-    console.log(location, 'LOCATION')
-    // if (nextProps.history.action !== 'POP' && (!location.state || !location.state.error)) {
-    //   this.previousLocation = this.props.location
-    // }
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps, 'nextProps')
   }
+
+  // componentWillUpdate(nextProps) {
+  //   const { location } = this.props
+  //   console.log(nextProps.history, 'JAJAKAJAJJAKAJAJ')
+
+  //   // if (
+  //   //   nextProps.history.action !== 'POP' &&
+  //   //   (!location.state || !location.state.error)
+  //   // ) {
+  //   //   this.previousLocation = this.props.location
+  //   // }
+  // }
 
   toggleVisibility = () =>
     this.setState({
@@ -33,7 +40,6 @@ class App extends Component {
     const { activeItem, visible, icon, dateTime } = this.state
 
     const isError = !!(location && this.previousLocation !== location)
-console.log(location);
 
     return (
       <div style={{ height: '100%', background: '#eee' }}>
@@ -43,25 +49,26 @@ console.log(location);
           <Switch location={isError ? this.previousLocation : location}>
             <Layout
               path="/reports"
-              component={AsyncDashboard}
-              visible={visible}
-              visibility={() => this.toggleVisibility}
-              icon={icon}
-            />
-            <Layout
-              path="/schedule"
-              component={AsyncDashboard}
+              routeComponent={AsyncDashboard}
               visible={visible}
               visibility={() => this.toggleVisibility}
               icon={icon}
             />
             <Layout
               path="/accounts"
-              component={AsyncDashboard}
+              routeComponent={AsyncDashboard}
               visible={visible}
               visibility={() => this.toggleVisibility}
               icon={icon}
             />
+            <Layout
+              path="/schedule"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
+
             <Route exact path="/" component={AsyncLogin} />
           </Switch>
         )}
@@ -69,9 +76,5 @@ console.log(location);
     )
   }
 }
-
-App = connect(state => ({
-  location: state.location,
-}))(App)
 
 export default App

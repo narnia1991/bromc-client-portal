@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Route, Redirect } from 'react-router-dom'
 import { Sidebar, Segment, Header } from 'semantic-ui-react'
@@ -6,24 +6,36 @@ import NavHeader from '../NavHeader'
 import NavSidebar from '../NavSidebar'
 
 const propTypes = {
-  visibility: PropTypes,
+  routeComponent: PropTypes.node,
+  visibility: PropTypes.func,
   icon: PropTypes.string,
   visible: PropTypes.bool,
 }
 
-function Layout({ component: Component, visibility, icon, visible, ...rest }) {
+function Layout(propTypes) {
+  const {
+    routeComponent: Component,
+    visibility,
+    icon,
+    visible,
+    ...rest
+  } = propTypes
+
   return (
     <Route
       {...rest}
-      render={props => (
+      render={propTypes => (
         <div>
           <NavHeader visibility={visibility} icon={icon} />
 
-          <Sidebar.Pushable as={Segment} style={{ minHeight: '100vh', marginTop: 0 }}>
-            <NavSidebar visible={visible} />
+          <Sidebar.Pushable
+            as={Segment}
+            style={{ minHeight: '100vh', marginTop: 0 }}
+          >
+            <NavSidebar visible={visible} {...propTypes} />
             <Sidebar.Pusher>
               <Segment basic>
-                <Component {...props} />
+                <Component {...propTypes} />
               </Segment>
             </Sidebar.Pusher>
           </Sidebar.Pushable>
@@ -32,19 +44,5 @@ function Layout({ component: Component, visibility, icon, visible, ...rest }) {
     />
   )
 }
-
-// class Layout extends Component {
-//   static propTypes = {
-//     visibility: PropTypes,
-//     icon: PropTypes.string,
-//     visible: PropTypes.bool,
-//   }
-//
-//   render() {
-//     const { component, visibility, icon, visible } = this.props
-//
-//
-//   }
-// }
 
 export default Layout

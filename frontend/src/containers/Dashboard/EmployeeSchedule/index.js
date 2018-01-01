@@ -5,7 +5,6 @@ export default class EmployeeSchedule extends Component {
   static propTypes = {}
 
   render() {
-    return <div>'EmployeeSchedule'</div>
+    return <div>'Employee Schedule'</div>
   }
 }
-

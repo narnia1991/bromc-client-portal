@@ -12,9 +12,21 @@ class Dashboard extends Component {
             return route.subRoute.map((subRoute, subIndex) => {
               if (subRoute.access === true) {
                 if (subRoute.rootPath) {
-                  return <Route key={subIndex} {...subRoute} path={subRoute.rootPath} />
+                  return (
+                    <Route
+                      key={subIndex}
+                      {...subRoute}
+                      path={subRoute.rootPath}
+                    />
+                  )
                 } else {
-                  return <Route key={subIndex} {...subRoute} path={`${route.path}/${subRoute.path}`} />
+                  return (
+                    <Route
+                      key={subIndex}
+                      {...subRoute}
+                      path={`${route.path}/${subRoute.path}`}
+                    />
+                  )
                 }
               } else {
                 return null
@@ -38,21 +50,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard
-
-{
-  /* <div>
-  <NavHeader visibility={() => this.toggleVisibility} icon={icon} />
-
-  <Sidebar.Pushable
-    as={Segment}
-    style={{ minHeight: '100vh', marginTop: 0 }}
-  >
-    <NavSidebar visible={visible} />
-    <Sidebar.Pusher>
-      <Segment basic>
-        <Header as="h3">Application Content</Header>
-      </Segment>
-    </Sidebar.Pusher>
-  </Sidebar.Pushable>
-</div> */
-}
