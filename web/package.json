@@ -1,0 +1,21 @@
+{
+  "name": "layouts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-country-region-selector": "^1.2.3",
+    "react-datepicker": "^0.64.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
