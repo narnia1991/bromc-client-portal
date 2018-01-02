@@ -68,7 +68,20 @@ class App extends Component {
               visibility={() => this.toggleVisibility}
               icon={icon}
             />
-
+            <Layout
+              path="/clients"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
+            <Layout
+              path="/leaves"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
             <Route exact path="/" component={AsyncLogin} />
           </Switch>
         )}

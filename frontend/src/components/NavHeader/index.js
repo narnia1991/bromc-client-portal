@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {
-  Input,
-  Menu,
-  Sidebar,
-  Segment,
-  Button,
-  Icon,
-  Header,
-} from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react'
 import { getDateTime } from '../../utils/dateLoader'
 
 export default class NavHeader extends Component {

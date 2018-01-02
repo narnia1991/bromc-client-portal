@@ -3,18 +3,18 @@ import asyncComponent from '../containers/AsyncComponent'
 const AsyncReports = asyncComponent(() =>
   import('../containers/Dashboard/Reports')
 )
-const AsyncClientSchedule = asyncComponent(() =>
-  import('../containers/Dashboard/ClientSchedule')
-)
-const AsyncEmployeeSchedule = asyncComponent(() =>
-  import('../containers/Dashboard/EmployeeSchedule')
+const AsyncSchedule = asyncComponent(() =>
+  import('../containers/Dashboard/Schedule')
 )
 const AsyncAccounts = asyncComponent(() =>
   import('../containers/Dashboard/Accounts')
 )
-const AsyncDashboard = asyncComponent(() => import('../containers/Dashboard'))
-
-const AsyncLogin = asyncComponent(() => import('../components/Login'))
+const AsyncClients = asyncComponent(() =>
+  import('../containers/Dashboard/Clients')
+)
+const AsyncLeaves = asyncComponent(() =>
+  import('../containers/Dashboard/Leaves')
+)
 
 const routes = [
   {
@@ -29,22 +29,14 @@ const routes = [
     path: '/schedule',
     exact: true,
     access: true,
-    subRoute: [
-      {
-        name: 'Client Schedule',
-        rootPath: '/schedule/client',
-        exact: true,
-        access: true,
-        component: AsyncClientSchedule,
-      },
-      {
-        name: 'Employee Schedule',
-        rootPath: '/schedule/employee',
-        exact: true,
-        access: true,
-        component: AsyncEmployeeSchedule,
-      },
-    ],
+    component: AsyncSchedule,
+  },
+  {
+    name: 'Leaves',
+    path: '/leaves',
+    exact: true,
+    access: true,
+    component: AsyncLeaves,
   },
   {
     name: 'Accounts',
@@ -52,6 +44,13 @@ const routes = [
     exact: true,
     access: true,
     component: AsyncAccounts,
+  },
+  {
+    name: 'Clients',
+    path: '/clients',
+    exact: true,
+    access: true,
+    component: AsyncClients,
   },
 ]
 
