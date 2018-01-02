@@ -1,5 +1,8 @@
 import asyncComponent from '../containers/AsyncComponent'
 
+const AsyncDashboard = asyncComponent(() =>
+  import('../containers/Dashboard/Main')
+)
 const AsyncReports = asyncComponent(() =>
   import('../containers/Dashboard/Reports')
 )
@@ -17,6 +20,13 @@ const AsyncLeaves = asyncComponent(() =>
 )
 
 const routes = [
+  {
+    name: 'Dashboard',
+    path: '/dashboard',
+    exact: true,
+    access: true,
+    component: AsyncDashboard,
+  },
   {
     name: 'Reports',
     path: '/reports',

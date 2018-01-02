@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Menu, Icon } from 'semantic-ui-react'
 import { getDateTime } from '../../utils/dateLoader'
+import { Link } from 'react-router-dom'
 
 export default class NavHeader extends Component {
   state = { activeItem: 'home', icon: 'content', dateTime: '' }
@@ -39,6 +40,8 @@ export default class NavHeader extends Component {
           name="home"
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
+          as={Link}
+          to="/dashboard"
         >
           <Icon name="home" size="big" style={{ margin: 0 }} />
         </Menu.Item>

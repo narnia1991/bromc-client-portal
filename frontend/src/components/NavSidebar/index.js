@@ -12,14 +12,45 @@ import {
 import { Link, NavLink } from 'react-router-dom'
 import { FaAngleDown, FaAngleUp } from 'react-icons/lib/fa'
 
-import routes from './../../routes'
+const routes = [
+  {
+    name: 'Reports',
+    path: '/reports',
+    exact: true,
+    access: true,
+  },
+  {
+    name: 'Schedule',
+    path: '/schedule',
+    exact: true,
+    access: true,
+  },
+  {
+    name: 'Leaves',
+    path: '/leaves',
+    exact: true,
+    access: true,
+  },
+  {
+    name: 'Accounts',
+    path: '/accounts',
+    exact: true,
+    access: true,
+  },
+  {
+    name: 'Clients',
+    path: '/clients',
+    exact: true,
+    access: true,
+  },
+]
 
 export default class NavSidebar extends Component {
   static propTypes = {
     visible: PropTypes.bool,
   }
 
-  state = { activeIndex: null, activeItem: 'Reports' }
+  state = { activeIndex: null, activeItem: '' }
 
   handleToggleDropdown = (index, name) => {
     if (this.state.activeIndex === index) {

@@ -13,22 +13,6 @@ class App extends Component {
 
   previousLocation = this.props.location
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps, 'nextProps')
-  }
-
-  // componentWillUpdate(nextProps) {
-  //   const { location } = this.props
-  //   console.log(nextProps.history, 'JAJAKAJAJJAKAJAJ')
-
-  //   // if (
-  //   //   nextProps.history.action !== 'POP' &&
-  //   //   (!location.state || !location.state.error)
-  //   // ) {
-  //   //   this.previousLocation = this.props.location
-  //   // }
-  // }
-
   toggleVisibility = () =>
     this.setState({
       visible: !this.state.visible,
@@ -47,6 +31,13 @@ class App extends Component {
           <Route component={PageNotFound} />
         ) : (
           <Switch location={isError ? this.previousLocation : location}>
+            <Layout
+              path="/dashboard"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
             <Layout
               path="/reports"
               routeComponent={AsyncDashboard}
