@@ -22,12 +22,12 @@ export default class Login extends Component {
     console.log(newObject)
     this.setState(newObject)
   }
-  handleCheckBilling = async () => {
-    const billing = await BillingCheckAction()
+  handleCheckBilling() {
+    const billing = BillingCheckAction()
   }
   componentWillMount() {
     AccessCheck()
-    handleCheckBilling()
+    this.handleCheckBilling
   }
   componentDidMount() {}
   render() {
@@ -69,7 +69,7 @@ export default class Login extends Component {
             login
           </button>
         </form>
-      </div>
+      </div>,
     ]
   }
 }
