@@ -15,11 +15,6 @@ export default class MenuExampleHeader extends Component {
           <Icon name="home" size="large" />Big River Orthopedic Massage Clinic
         </Menu.Item>
         <Menu.Item
-          name="aboutUs"
-          active={activeItem === 'aboutUs'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
           name="locations"
           active={activeItem === 'locations'}
           onClick={this.handleItemClick}

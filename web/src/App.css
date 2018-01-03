@@ -33,13 +33,3 @@
 .registration {
   padding: 5em;
 }
-.landing-image {
-  background-image: url('./Home.png') !important;
-  background-size: cover !important;
-}
-#vertical {
-  height: 100%;
-  width: 400px;
-  background: url('../home.png') no-repeat center center;
-  background-size: contain;
-}

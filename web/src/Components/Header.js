@@ -12,7 +12,7 @@
 import React, { Component } from 'react'
 import { Menu, Input, Icon, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-
+import Home from './Home'
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -30,13 +30,6 @@ class Header extends Component {
           to="/Home"
           name="Home"
           active={activeItem === 'Home'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          as={Link}
-          to="/About"
-          name="AboutUs"
-          active={activeItem === 'AboutUs'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
