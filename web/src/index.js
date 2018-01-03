@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: index.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T18:23:48+08:00
+ * @Last modified time: 2018-01-03T19:25:44+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -22,6 +22,7 @@ import './index.css'
 
 //import navbar
 import Header from './Components/Header'
+import SetAuthorizationToken from './utils/SetAuthorizationToken'
 //import modules
 import About from './Components/AboutUs'
 import Client from './Components/Client'
