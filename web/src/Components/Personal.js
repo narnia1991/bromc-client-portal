@@ -1,6 +1,15 @@
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-03T15:29:59+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: Personal.js
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T16:02:49+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
 import React, { Component } from 'react'
-import './App.css'
-import 'semantic-ui-css/semantic.min.css'
 import {
   Icon,
   Label,
@@ -15,16 +24,14 @@ import {
   Radio,
   Select,
   TextArea,
-  Segment,
+  Segment
 } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
-import Personal from './App.js'
-import 'react-datepicker/dist/react-datepicker.css'
 
 const options = [
   { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
+  { key: 'f', text: 'Female', value: 'female' }
 ]
 const country = [{ key: 'Ph', text: 'Philippines', value: 'Philippines' }]
 

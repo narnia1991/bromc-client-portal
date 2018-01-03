@@ -1,7 +1,17 @@
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-03T15:29:59+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: Header.js
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T16:07:08+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
 import React, { Component } from 'react'
 import { Menu, Input, Icon, Image } from 'semantic-ui-react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import 'semantic-ui-css/semantic.min.css'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   constructor(props) {
@@ -37,8 +47,10 @@ class Header extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name="Set an appointment"
-          active={activeItem === 'Set an appointment'}
+          as={Link}
+          to="/Login"
+          name="login"
+          active={activeItem === 'login'}
           onClick={this.handleItemClick}
         />
       </Menu>

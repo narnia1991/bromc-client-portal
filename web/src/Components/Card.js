@@ -1,6 +1,16 @@
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-01T19:15:10+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: Card.js
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T16:01:23+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
 import React from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
 
 const CardExampleGroups = () => (
   <Card.Group>

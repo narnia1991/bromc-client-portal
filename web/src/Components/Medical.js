@@ -1,5 +1,15 @@
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-01T19:15:10+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: Medical.js
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T16:02:24+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
 import React, { Component } from 'react'
-import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 import {
   Icon,
@@ -15,16 +25,14 @@ import {
   Radio,
   Select,
   TextArea,
-  Segment,
+  Segment
 } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
-import Personal from './App.js'
-import 'react-datepicker/dist/react-datepicker.css'
 
 const options = [
   { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
+  { key: 'f', text: 'Female', value: 'female' }
 ]
 const country = [{ key: 'Ph', text: 'Philippines', value: 'Philippines' }]
 const ortho = [
@@ -34,13 +42,13 @@ const ortho = [
   {
     key: 'ScoliSpasms, crampsosis',
     text: 'Spasms, cramps',
-    value: 'Spasms, cramps',
+    value: 'Spasms, cramps'
   },
   { key: 'Sprains/Strains', text: 'Sprains/Strains', value: 'Sprains/Strains' },
   {
     key: 'Tendinitis/Bursitis ',
     text: 'Tendinitis/Bursitis ',
-    value: 'Tendinitis/Bursitis ',
+    value: 'Tendinitis/Bursitis '
   },
   { key: 'Spinal injury', text: 'Spinal injury', value: 'Spinal injury' },
   { key: 'Neck pain', text: 'Neck pain', value: 'Neck pain' },
@@ -51,18 +59,18 @@ const ortho = [
   {
     key: 'Shoulder & arm Pain',
     text: 'Shoulder & arm Pain',
-    value: 'Shoulder & arm Pain',
+    value: 'Shoulder & arm Pain'
   },
   {
     key: 'Weak or sore muscles',
     text: 'Weak or sore muscles',
-    value: 'Weak or sore muscles',
+    value: 'Weak or sore muscles'
   },
   {
     key: 'Sciatica, shooting pain',
     text: 'Sciatica, shooting pain',
-    value: 'Sciatica, shooting pain',
-  },
+    value: 'Sciatica, shooting pain'
+  }
 ]
 const neurology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -71,7 +79,7 @@ const neurology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const psychiatry = [
   { key: 'None', text: 'None', value: 'None' },
@@ -80,7 +88,7 @@ const psychiatry = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const gastrointestinal = [
   { key: 'None', text: 'None', value: 'None' },
@@ -89,7 +97,7 @@ const gastrointestinal = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const pulmonaryMedicine = [
   { key: 'None', text: 'None', value: 'None' },
@@ -98,7 +106,7 @@ const pulmonaryMedicine = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const cardiology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -107,7 +115,7 @@ const cardiology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const infectiousDiseases = [
   { key: 'None', text: 'None', value: 'None' },
@@ -116,7 +124,7 @@ const infectiousDiseases = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const endocrinology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -125,7 +133,7 @@ const endocrinology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const rheumatology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -134,7 +142,7 @@ const rheumatology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const obGyne = [
   { key: 'None', text: 'None', value: 'None' },
@@ -143,7 +151,7 @@ const obGyne = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const nephrology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -152,7 +160,7 @@ const nephrology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const oncology = [
   { key: 'None', text: 'None', value: 'None' },
@@ -161,7 +169,7 @@ const oncology = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const pastMedical = [
   { key: 'None', text: 'None', value: 'None' },
@@ -170,7 +178,7 @@ const pastMedical = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const vascularMedicine = [
   { key: 'None', text: 'None', value: 'None' },
@@ -179,7 +187,7 @@ const vascularMedicine = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const duringMassage = [
   { key: 'None', text: 'None', value: 'None' },
@@ -188,7 +196,7 @@ const duringMassage = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const painENT = [
   { key: 'None', text: 'None', value: 'None' },
@@ -197,7 +205,7 @@ const painENT = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const derma = [
   { key: 'None', text: 'None', value: 'None' },
@@ -206,7 +214,7 @@ const derma = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 const breast = [
   { key: 'None', text: 'None', value: 'None' },
@@ -215,7 +223,7 @@ const breast = [
   { key: 'Epilepsy', text: 'Epilepsy', value: 'Epilepsy' },
   { key: 'Numbness', text: 'Numbness', value: 'Numbness' },
   { key: 'Tingling', text: 'Tingling', value: 'Tingling' },
-  { key: 'Headache', text: 'Headache', value: 'Headache' },
+  { key: 'Headache', text: 'Headache', value: 'Headache' }
 ]
 class Medical extends Component {
   state = {}
