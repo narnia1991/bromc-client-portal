@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AboutUs.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T20:54:07+08:00
+ * @Last modified time: 2018-01-03T21:44:32+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -17,7 +17,12 @@ export const About = () => [
   <div className="ui text container">
     <h1 className="ui dividing header">
       Welcome to{' '}
-      <img width="300" height="200" src={require('../Images/Logo.png')} />
+      <img
+        width="300"
+        height="200"
+        src={require('../Images/Logo.png')}
+        alt="logo"
+      />
     </h1>
     <h3 className="first">About us</h3>
     <p align="auto">
@@ -34,6 +39,7 @@ export const About = () => [
       width="650"
       height="400"
       src={require('../Images/Home.jpg')}
+      alt="home"
     />
   </div>
 ]

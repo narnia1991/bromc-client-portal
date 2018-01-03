@@ -4,21 +4,25 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T21:25:10+08:00
+ * @Last modified time: 2018-01-03T21:58:00+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React, { Component } from 'react'
 import Header from './Header'
+import AccessCheck from '../../utils/AccessCheck'
+import config from '../../config'
 
-export default class ForgotPassword extends Component {
+export default class Reservation extends Component {
   state = {}
-
   handleInputChange = (name, value) => {
     let newObject = {}
     newObject[name] = value
     console.log(newObject)
     this.setState(newObject)
+  }
+  componentWillMount() {
+    AccessCheck()
   }
   render() {
     return [
@@ -31,21 +35,35 @@ export default class ForgotPassword extends Component {
             this.handleLogin()
           }}
         >
-          <h1>Forgot Password</h1>
+          <h1>Reservation</h1>
           <div className="field">
             <label>Email</label>
             <input
               type="text"
-              name="e_mail"
+              name="username"
               placeholder="Email"
               onChange={e => {
                 e.preventDefault()
-                this.handleInputChange('email', e.target.value)
+                this.handleInputChange('username', e.target.value)
               }}
             />
           </div>
+          <div className="field">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={e => {
+                e.preventDefault()
+                this.handleInputChange('password', e.target.value)
+              }}
+            />
+          </div>
+          <p>
+            <a href={`${config.web}/ForgotPassword`}>Forgot Password</a>
+          </p>
           <button className="ui button" type="submit">
-            Submit
+            login
           </button>
         </form>
       </div>
