@@ -21,7 +21,7 @@ class Header extends Component {
     const { activeItem } = this.state
     return (
       <Menu>
-        <Menu.Item header>
+        <Menu.Item>
           <Icon name="home" size="large" />Big River Orthopedic Massage Clinic
         </Menu.Item>
         <Menu.Item

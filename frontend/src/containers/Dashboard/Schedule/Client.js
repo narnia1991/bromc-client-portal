@@ -1,15 +1,93 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { Modal, Segment, Form } from 'semantic-ui-react'
+import InputDisplay from '../../../components/Forms/InputDisplay'
 import { TableDataGrid } from '../../../components/TableDataGrid'
+import { requestApiData } from '../../../actions/FetchAction'
 
-export default class Client extends Component {
+class Client extends Component {
   static propTypes = {}
+
+  state = {
+    id: '',
+    modalOpen: true,
+  }
+
+  handleModal = id => {
+    this.setState({ id: id, modalOpen: !this.state.modalOpen })
+
+    this.props.requestApiData(`/client-schedule/${id}`)
+  }
+
+  renderModal() {
+    const { modalOpen, id } = this.state
+    const { records } = this.props
+
+    return (
+      <Modal open={modalOpen} closeIcon onClose={this.handleModal}>
+        <Modal.Header>View Information</Modal.Header>
+        <Modal.Content scrolling>
+          <Segment style={{ minHeight: '400px' }}>
+            {/* {records && ( */}
+
+            <Form>
+              <Form.Group widths="equal">
+                <InputDisplay
+                  label="First Name"
+                  // value={records.first_name}
+                />
+                <InputDisplay
+                  label="Middle Name"
+                  // value={records.middle_name}
+                />
+                <InputDisplay
+                  label="Last Name"
+                  //  value={records.last_name}
+                />
+              </Form.Group>
+              <Form.Group widths="equal">
+                <InputDisplay
+                  label="Clinic"
+                  // value={records.clinic}
+                />
+                <InputDisplay
+                  label="Date Therapy"
+                  // value={records.date_therapy}
+                />
+                <InputDisplay
+                  label="From"
+                  // value={records.from}
+                />
+                <InputDisplay
+                  label="To"
+                  // value={records.to}
+                />
+              </Form.Group>
+              <Form.Group>
+                {/* <label>Medical History</label>
+                {records.medical_history.map((value, index) => {
+                  return (
+                    <InputDisplay
+                      label={records.medical_history.field_name}
+                      value={records.medical_history.field_name}
+                    />
+                  )
+                })} */}
+              </Form.Group>
+            </Form>
+            {/* )} */}
+          </Segment>
+        </Modal.Content>
+      </Modal>
+    )
+  }
 
   render() {
     return (
       <div>
         <TableDataGrid
-          keyValue=""
+          keyValue="registration_id"
           api={{
             default: '/delivery',
             delete: '/delivery',
@@ -23,20 +101,15 @@ export default class Client extends Component {
               text: 'Create User',
               color: '',
             },
-            {
-              name: 'search',
-              icon: '',
-              path: '',
-              text: 'Search...',
-              color: '',
-            },
           ]}
           actions={[
             {
               access: true,
               action_name: 'view',
               icon: 'view',
-              path: '/clients/view',
+              action: id => {
+                this.handleModalMe
+              },
             },
           ]}
           limit={[
@@ -46,27 +119,25 @@ export default class Client extends Component {
           ]}
           headers={[
             {
-              id: 1,
               name: 'first_name',
-              title: 'Delivery Date',
+              title: 'First Name',
               sortable: true,
             },
             {
-              id: 2,
               name: 'middle_name',
-              title: 'Trucker Code',
+              title: 'Middle Name',
               sortable: true,
             },
             {
               id: 3,
               name: 'last_name',
-              title: 'Delivery No',
+              title: 'Last Name',
               sortable: true,
             },
             {
               id: 4,
-              name: 'delivery_role_id',
-              title: 'Ship to Code',
+              name: 'date',
+              title: 'Date',
               sortable: true,
             },
             {
@@ -77,7 +148,19 @@ export default class Client extends Component {
             },
           ]}
         />
+
+        {this.renderModal()}
       </div>
     )
   }
 }
+
+Client = connect(
+  state => ({
+    records: state.viewRecords,
+    // pull initial values from account reducer
+  }),
+  { requestApiData } // bind account loading action creator
+)(Client)
+
+export default Client

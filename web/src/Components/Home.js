@@ -34,16 +34,15 @@ export const Home = () => [
       the general public. The company is fully qualified to do these things and
       are recognized by the medical profession and the medical insurance
       industry. Peter W. Lock 67 years old the owner of BROMC.
+      <img
+        align="center"
+        width="100%"
+        height="400"
+        src={require('../Images/Home.jpg')}
+        alt="home"
+      />
     </p>
-    <img
-      align="center"
-      width="650"
-      height="400"
-      src={require('../Images/Home.jpg')}
-      alt="home"
-    />
-  </div>
+  </div>,
 ]
 
 export default Home
-

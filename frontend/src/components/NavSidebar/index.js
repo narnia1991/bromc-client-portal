@@ -11,39 +11,7 @@ import {
 } from 'semantic-ui-react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaAngleDown, FaAngleUp } from 'react-icons/lib/fa'
-
-const routes = [
-  {
-    name: 'Reports',
-    path: '/reports',
-    exact: true,
-    access: true,
-  },
-  {
-    name: 'Schedule',
-    path: '/schedule',
-    exact: true,
-    access: true,
-  },
-  {
-    name: 'Leaves',
-    path: '/leaves',
-    exact: true,
-    access: true,
-  },
-  {
-    name: 'Accounts',
-    path: '/accounts',
-    exact: true,
-    access: true,
-  },
-  {
-    name: 'Clients',
-    path: '/clients',
-    exact: true,
-    access: true,
-  },
-]
+import { getRole } from '../../utils/userLoader'
 
 export default class NavSidebar extends Component {
   static propTypes = {
@@ -63,6 +31,38 @@ export default class NavSidebar extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
+    let routes = [
+      {
+        name: 'Reports',
+        path: '/reports',
+        exact: true,
+        access: getRole('reports'),
+      },
+      {
+        name: 'Schedule',
+        path: '/schedule',
+        exact: true,
+        access: getRole('schedule'),
+      },
+      {
+        name: 'Leaves',
+        path: '/leaves',
+        exact: true,
+        access: getRole('leaves'),
+      },
+      {
+        name: 'Accounts',
+        path: '/accounts',
+        exact: true,
+        access: getRole('accounts'),
+      },
+      {
+        name: 'Clients',
+        path: '/clients',
+        exact: true,
+        access: getRole('clients'),
+      },
+    ]
     const { activeItem, activeIndex } = this.state
 
     const { visible, match } = this.props
