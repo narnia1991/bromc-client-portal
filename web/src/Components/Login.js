@@ -4,21 +4,25 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:59:10+08:00
+ * @Last modified time: 2018-01-03T21:02:32+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React, { Component } from 'react'
-import LoginAction from '../Actions/Login'
+import Header from './Header'
+import { login } from '../Actions/AuthActions'
+import config from '../config'
 
 export default class Login extends Component {
   state = {}
-  handleLogin = () => {
+  handleLogin = async e => {
     const data = {
       username: this.state.username,
       password: this.state.password
     }
-    console.log(data)
+    console.log('inside Submit')
+    const success = await login(data)
+    if (success) window.location.href = `${config.web}/Client`
   }
   handleInputChange = (name, value) => {
     let newObject = {}
@@ -27,9 +31,16 @@ export default class Login extends Component {
     this.setState(newObject)
   }
   render() {
-    return (
+    return [
+      <Header />,
       <div className="ui container ">
-        <form className="ui form ">
+        <form
+          className="ui form "
+          onSubmit={e => {
+            e.preventDefault()
+            this.handleLogin()
+          }}
+        >
           <h1>Login</h1>
           <div className="field">
             <label>Email</label>
@@ -54,15 +65,14 @@ export default class Login extends Component {
               }}
             />
           </div>
-          <button
-            className="ui button"
-            type="submit"
-            onClick={() => this.handleLogin()}
-          >
+          <p>
+            <a href={`${config.web}/ForgotPassword`}>Forgot Password</a>
+          </p>
+          <button className="ui button" type="submit">
             login
           </button>
         </form>
       </div>
-    )
+    ]
   }
 }

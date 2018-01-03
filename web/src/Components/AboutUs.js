@@ -4,13 +4,16 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AboutUs.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T18:55:08+08:00
+ * @Last modified time: 2018-01-03T20:54:07+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
+import Header from './Header'
 import React from 'react'
-export const About = () => (
+
+export const About = () => [
+  <Header />,
   <div className="ui text container">
     <h1 className="ui dividing header">
       Welcome to{' '}
@@ -33,6 +36,6 @@ export const About = () => (
       src={require('../Images/Home.jpg')}
     />
   </div>
-)
+]
 
 export default About

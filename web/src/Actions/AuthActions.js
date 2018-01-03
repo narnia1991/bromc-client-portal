@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AuthActions.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:50:35+08:00
+ * @Last modified time: 2018-01-03T20:30:12+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -14,12 +14,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AuthActions.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:50:35+08:00
+ * @Last modified time: 2018-01-03T20:30:12+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import axios from 'axios'
+import config from '../config'
 import jwtDecode from 'jwt-decode'
 import SetAuthorizationToken from '../utils/SetAuthorizationToken'
 
@@ -29,9 +30,16 @@ export const logout = () => {
 }
 
 export const login = async data => {
-  const result = await axios.post('/api/auth', data)
-  const token = res.data.token
-  localStorage.setItem('jwtToken', token)
-  SetAuthorizationToken(token)
-  console.log(jwtDecode(token)) // token includes role, user_id, display_name
+  console.log('inside login', data, `${config.api}/auth`)
+  const result = await axios({
+    method: 'post',
+    url: `${config.api}/auth`,
+    data: data
+  })
+  const token = result.data.token
+  if (token) {
+    localStorage.setItem('jwtToken', token)
+    SetAuthorizationToken(token)
+    return true
+  } else return false
 }
