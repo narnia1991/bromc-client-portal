@@ -2,7 +2,7 @@
 * @Author: Narnia
 * @Date:   2017-12-08 20:02:08
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T18:46:21+08:00
+ * @Last modified time: 2018-01-03T19:42:10+08:00
 */
 import bodyParser from 'body-parser' //to enable the browser to read json response
 import cors from 'cors' //to enable the frontend app to communicate to this server
@@ -34,6 +34,7 @@ import logs from './routes/logs'
 import medHistory from './routes/medical_history'
 import registration from './routes/registration'
 import reports from './routes/reports'
+import schedule from './routes/schedule'
 import therOpts from './routes/therapy_details'
 import userInfo from './routes/user_info'
 import users from './routes/users'
@@ -46,6 +47,7 @@ app.use('/api/logout', cors(), logout)
 app.use('/api/logs', cors(), logs)
 app.use('/api/registration', cors(), therOpts)
 app.use('/api/reports', cors(), reports)
+app.use('/api/schedule', cors(), schedule)
 app.use('/api/therapy-options', cors(), therOpts)
 app.use('/api/user-info', cors(), userInfo)
 app.use('/api/users', cors(), users)
