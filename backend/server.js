@@ -2,7 +2,7 @@
 * @Author: Narnia
 * @Date:   2017-12-08 20:02:08
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T15:23:04+08:00
+ * @Last modified time: 2018-01-03T18:46:21+08:00
 */
 import bodyParser from 'body-parser' //to enable the browser to read json response
 import cors from 'cors' //to enable the frontend app to communicate to this server
@@ -21,7 +21,11 @@ app.use(methodOverride('_method'))
 app.options('*', cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.all('/*', function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With')
+  next()
+})
 //routes
 import country from './routes/country'
 import login from './routes/login'
@@ -35,16 +39,16 @@ import userInfo from './routes/user_info'
 import users from './routes/users'
 
 //API routes
-app.use('/api/auth', login)
-app.use('/api/country', country)
-app.use('/api/medical-history', medHistory)
-app.use('/api/logout', logout)
-app.use('/api/logs', logs)
-app.use('/api/registration', therOpts)
-app.use('/api/reports', reports)
-app.use('/api/therapy-options', therOpts)
-app.use('/api/user-info', userInfo)
-app.use('/api/users', users)
+app.use('/api/auth', cors(), login)
+app.use('/api/country', cors(), country)
+app.use('/api/medical-history', cors(), medHistory)
+app.use('/api/logout', cors(), logout)
+app.use('/api/logs', cors(), logs)
+app.use('/api/registration', cors(), therOpts)
+app.use('/api/reports', cors(), reports)
+app.use('/api/therapy-options', cors(), therOpts)
+app.use('/api/user-info', cors(), userInfo)
+app.use('/api/users', cors(), users)
 
 app.listen(port)
 console.log('Cool! the server is listening at port : ' + port)

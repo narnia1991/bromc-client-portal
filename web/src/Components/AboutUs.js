@@ -4,16 +4,16 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AboutUs.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T16:05:44+08:00
+ * @Last modified time: 2018-01-03T17:47:16+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React from 'react'
-
+const image = '../Images/Home.png'
 const About = () => (
   <div className="ui text container">
-    <img className="landing-image" src="./Home.png" />
+    <img className="landing-image" src={image} />
     <h1 className="ui dividing header">Welcome to BROMC</h1>
     <h3 className="first">About us</h3>
     <p align="center">
