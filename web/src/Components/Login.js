@@ -4,12 +4,12 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:26:46+08:00
+ * @Last modified time: 2018-01-03T19:59:10+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React, { Component } from 'react'
-import LoginAction from './Actions/Login'
+import LoginAction from '../Actions/Login'
 
 export default class Login extends Component {
   state = {}
@@ -23,6 +23,7 @@ export default class Login extends Component {
   handleInputChange = (name, value) => {
     let newObject = {}
     newObject[name] = value
+    console.log(newObject)
     this.setState(newObject)
   }
   render() {
@@ -36,22 +37,28 @@ export default class Login extends Component {
               type="text"
               name="username"
               placeholder="Email"
-              onChange={() => {
-                this.handleInputChange('username', this.value)
+              onChange={e => {
+                e.preventDefault()
+                this.handleInputChange('username', e.target.value)
               }}
             />
           </div>
           <div className="field">
-            <label>Last Name</label>
+            <label>Password</label>
             <input
               type="password"
               name="password"
-              onChange={() => {
-                this.handleInputChange('password', this.value)
+              onChange={e => {
+                e.preventDefault()
+                this.handleInputChange('password', e.target.value)
               }}
             />
           </div>
-          <button className="ui button" type="submit">
+          <button
+            className="ui button"
+            type="submit"
+            onClick={() => this.handleLogin()}
+          >
             login
           </button>
         </form>

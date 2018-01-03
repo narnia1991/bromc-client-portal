@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Header.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:24:43+08:00
+ * @Last modified time: 2018-01-03T19:50:49+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -67,7 +67,6 @@ class Header extends Component {
             as={Link}
             to="/Login"
             name="Login"
-            visible={() => console.log(this.state.isLoggedIn)}
             active={activeItem === 'login'}
             onClick={this.handleItemClick}
           />
