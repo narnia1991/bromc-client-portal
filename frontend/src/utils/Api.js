@@ -23,10 +23,8 @@ export async function viewData(url) {
   return data
 }
 
-export async function postData(url, values, token) {
-  let response = await axios.post(url, values, {
-    headers: { 'X-Auth-Token': token ? getCookie() : null },
-  })
+export async function postData(url, values) {
+  let response = await axios.post(url, values)
   return response
 }
 

@@ -5,7 +5,7 @@ import asyncComponent from './containers/AsyncComponent'
 import PageNotFound from './components/PageNotFound'
 import Layout from './components/Layout'
 
-const AsyncLogin = asyncComponent(() => import('./components/Login'))
+const AsyncLogin = asyncComponent(() => import('./containers/Login'))
 const AsyncDashboard = asyncComponent(() => import('./containers/Dashboard'))
 
 class App extends Component {

@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment,
-} from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
+import LoginForm from '../../components/LoginForm'
 
 export default class Login extends Component {
+  submit = values => {
+    // print the form values to the console
+    console.log(values)
+  }
   render() {
     return (
       <div className="login-form">
@@ -34,28 +31,7 @@ export default class Login extends Component {
             <Header as="h2" color="teal" textAlign="center">
               Log-in to your account
             </Header>
-            <Form size="large">
-              <Segment stacked>
-                <Form.Input
-                  fluid
-                  icon="user"
-                  iconPosition="left"
-                  placeholder="E-mail address"
-                />
-                <Form.Input
-                  fluid
-                  icon="lock"
-                  iconPosition="left"
-                  placeholder="Password"
-                  type="password"
-                />
-
-                <Button color="teal" fluid size="large">
-                  Login
-                </Button>
-              </Segment>
-            </Form>
-            <Message>New to us? Sign Up</Message>
+            <LoginForm onSubmit={this.submit} />
           </Grid.Column>
         </Grid>
       </div>
