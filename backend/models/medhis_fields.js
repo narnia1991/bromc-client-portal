@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:35:51+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: medhis_fields.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T08:42:24+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:09:07+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: field_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('field_id', field_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: medhis_fields => {
-    return knex(table).insert(medhis_fields, 'id')
+    return knex(table).insert(medhis_fields, 'field_id')
   },
-  update: (id, medhis_fields) => {
+  update: (field_id, medhis_fields) => {
     return knex(table)
-      .where('id', id)
-      .update(medhis_fields, 'id')
+      .where('field_id', field_id)
+      .update(medhis_fields, 'field_id')
   },
-  delete: id => {
+  delete: field_id => {
     return knex(table)
-      .where('id', id)
+      .where('field_id', field_id)
       .del()
   }
 }

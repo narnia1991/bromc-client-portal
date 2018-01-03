@@ -2,14 +2,13 @@
 * @Author: Narnia
 * @Date:   2017-12-08 20:02:08
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2017-12-30T03:06:07+08:00
+ * @Last modified time: 2018-01-03T11:30:24+08:00
 */
 import bodyParser from 'body-parser' //to enable the browser to read json response
 import cors from 'cors' //to enable the frontend app to communicate to this server
 import logger from 'morgan' //we use this to log our api calls
 import methodOverride from 'method-override' //we use this so that we can call functions outside the scopes
-// import session from 'express-session'
-// var passport = require('passport')
+
 //this area is for the configuration of the express app
 import express from 'express'
 const app = express()
@@ -22,45 +21,30 @@ app.use(methodOverride('_method'))
 app.options('*', cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-//
-// const MySQLStore = require('express-mysql-session')(session)
-//
-// const options = {
-//   host: 'localhost',
-//   port: 3306,
-//   user: 'arjel002',
-//   password: 'Silly@2017',
-//   database: 'bromc'
-// }
-//
-// var sessionStore = new MySQLStore(options)
-//
-// app.use(
-//   session({
-//     key: 'session_cookie_name',
-//     secret: 'session_cookie_secret',
-//     store: sessionStore,
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// )
-//
-// app.use(passport.initialize())
-// app.use(passport.session())
+
 //routes
-// import city from './routes/city'
-import clients from './routes/clients'
 import country from './routes/country'
 import login from './routes/login'
-// import oauth2 from './routes/oauth2'
+import logout from './routes/logout'
+import logs from './routes/logs'
+import medHistory from './routes/medical_history'
+import registration from './routes/registration'
+import reports from './routes/reports'
+import therOpts from './routes/therapy_details'
 import users from './routes/users'
+import userInfo from './routes/user_info'
 
 //API routes
-app.use('/api/clients', clients)
+app.use('/api/auth', login)
 app.use('/api/country', country)
-app.use('/api/login', login)
-// app.use('/api/oauth2', oauth2)
+app.use('/api/medical-history', medHistory)
+app.use('/api/logout', logout)
+app.use('/api/logs', logs)
+app.use('/api/registration', therOpts)
+app.use('/api/reports', reports)
+app.use('/api/therapy-options', therOpts)
 app.use('/api/users', users)
+app.use('/api/user-info', userInfo)
 
 app.listen(port)
 console.log('Cool! the server is listening at port : ' + port)

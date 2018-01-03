@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:34:49+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: medical_history.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T09:41:08+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:07:24+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: medical_history_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('medical_history_id', medical_history_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: medical_history => {
-    return knex(table).insert(medical_history, 'id')
+    return knex(table).insert(medical_history, 'medical_history_id')
   },
-  update: (id, medical_history) => {
+  update: (medical_history_id, medical_history) => {
     return knex(table)
-      .where('id', id)
-      .update(medical_history, 'id')
+      .where('medical_history_id', medical_history_id)
+      .update(medical_history, 'medical_history_id')
   },
-  delete: id => {
+  delete: medical_history_id => {
     return knex(table)
-      .where('id', id)
+      .where('medical_history_id', medical_history_id)
       .del()
   }
 }

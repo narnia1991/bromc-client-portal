@@ -1,0 +1,134 @@
+clinic {
+  clinic_id: 0,
+  name: '',
+  address_1: null,
+  address_2: null,
+  city: 0,
+  country: '',
+  phone_number: '',
+  cell_number: '',
+  status: '',
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+fingerprint_device {
+  device_name: '',
+  vc: '',
+  ac: '',
+  vkey: ''
+}
+
+fingerprint_finger {
+  user_id: '',
+  finger_id: '',
+  finger_data: ''
+}
+
+
+logs {
+  log_id: 0,
+  log_user: 0,
+  log_type: '',
+  log_date: null,
+  log_screen: '',
+  log_action: '',
+  log_ip: '',
+  log_owner: '',
+  log_changes: ''
+}
+
+medhis_fields {
+  field_id: 0,
+  field_name: '',
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+medhis_items {
+  item_id: 0,
+  item_field: 0,
+  item_name: '',
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+medical_history {
+  medical_history_id: 0,
+  user_id: 0,
+  med_history: null,
+  date_created: null
+}
+
+registration {
+  registration_id: 0,
+  user_id: 0,
+  therapist_id: '',
+  clinic: '',
+  date_updated_registered: null,
+  date_therapy: null,
+  status: '',
+  date_updated: null
+}
+
+roles {
+  role_id: 0,
+  role_name: '',
+  role_privileges: null,
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+thersess_options {
+  options_id: 0,
+  options_therapy_id: 0,
+  options_preference: {},
+  date_created: ''
+}
+
+user {
+  user_id: 0,
+  user_info_id: 0,
+  username: '',
+  password: '',
+  display_name: '',
+  token: '',
+  login_attempts: 0,
+  lock_time: 0,
+  role: '',
+  status: '',
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+user_info {
+  user_id: 0,
+  user_info_id: 0,
+  username: '',
+  password: '',
+  display_name: '',
+  token: '',
+  login_attempts: 0,
+  lock_time: 0,
+  role: '',
+  status: '',
+  date_created: null,
+  date_updated: null,
+  date_deactivated: null
+}
+
+emp_leaves {
+  leave_id: 0,
+  therapist_id: '',
+  clinic: '',
+  status: '',
+  granted_by: 0,
+  date_created: null,
+  date_granted: null,
+  date_updated: null
+}
