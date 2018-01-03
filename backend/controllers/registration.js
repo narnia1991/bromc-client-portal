@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: registration.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T11:28:22+08:00
+ * @Last modified time: 2018-01-03T19:40:27+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -176,7 +176,21 @@ const getVolumeYearly = async (req, res) => {
   }
 }
 
+const getSchedule = async (req, res) => {
+  let query = registrationModel.getWhere('therapy_date', '>', new Date())
+
+  if (req.params.user_id) query.where({ user_id: req.params.user_id })
+
+  try {
+    const schedule = await query
+    res.json({ results: schedule })
+  } catch (err) {
+    res.json({ errors: err })
+  }
+}
+
 module.exports = {
+  getSchedule,
   getVolume,
   getVolumeWeekly,
   getVolumeMonthly,
