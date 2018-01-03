@@ -2,7 +2,7 @@
 * @Author: Narnia
 * @Date:   2017-12-08 20:02:08
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T11:30:24+08:00
+ * @Last modified time: 2018-01-03T15:23:04+08:00
 */
 import bodyParser from 'body-parser' //to enable the browser to read json response
 import cors from 'cors' //to enable the frontend app to communicate to this server
@@ -31,8 +31,8 @@ import medHistory from './routes/medical_history'
 import registration from './routes/registration'
 import reports from './routes/reports'
 import therOpts from './routes/therapy_details'
-import users from './routes/users'
 import userInfo from './routes/user_info'
+import users from './routes/users'
 
 //API routes
 app.use('/api/auth', login)
@@ -43,8 +43,8 @@ app.use('/api/logs', logs)
 app.use('/api/registration', therOpts)
 app.use('/api/reports', reports)
 app.use('/api/therapy-options', therOpts)
-app.use('/api/users', users)
 app.use('/api/user-info', userInfo)
+app.use('/api/users', users)
 
 app.listen(port)
 console.log('Cool! the server is listening at port : ' + port)
