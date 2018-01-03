@@ -9,6 +9,9 @@ const AsyncReports = asyncComponent(() =>
 const AsyncSchedule = asyncComponent(() =>
   import('../containers/Dashboard/Schedule')
 )
+const AsyncScheduleCreate = asyncComponent(() =>
+  import('../containers/Dashboard/Schedule/CreateSchedule')
+)
 const AsyncAccounts = asyncComponent(() =>
   import('../containers/Dashboard/Accounts')
 )
@@ -40,6 +43,22 @@ const routes = [
     exact: true,
     access: true,
     component: AsyncSchedule,
+    subRoute: [
+      {
+        name: 'Schedule',
+        rootPath: '/schedule',
+        exact: true,
+        access: true,
+        component: AsyncSchedule,
+      },
+      {
+        name: 'Create Schedule',
+        path: 'create',
+        exact: true,
+        access: true,
+        component: AsyncScheduleCreate,
+      },
+    ],
   },
   {
     name: 'Leaves',

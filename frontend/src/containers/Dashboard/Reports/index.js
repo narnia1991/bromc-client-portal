@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Tabs from '../../../components/Tabs'
 
 import Volume from './Volume'
-import Feedback from './Feedback'
+// import Feedback from './Feedback'
 
 export default class Reports extends Component {
   static propTypes = {}
@@ -18,9 +18,12 @@ export default class Reports extends Component {
     return (
       <Tabs
         show={this.handleItemClick}
-        tabs={[{ name: 'volume' }, { name: 'feedback' }]}
+        tabs={[
+          { name: 'volume' },
+          // , { name: 'feedback' }
+        ]}
         activeItem={activeItem}
-        tabComponent={activeItem === 'volume' ? Volume : Feedback}
+        tabComponent={activeItem === 'volume' ? Volume : null}
       />
     )
   }

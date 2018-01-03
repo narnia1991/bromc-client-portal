@@ -10,7 +10,7 @@ let LoginForm = props => {
     <Form size="large" onSubmit={handleSubmit(onSubmit)}>
       <Segment stacked>
         <Field
-          name="userName"
+          name="username"
           label="Username"
           component={InputText}
           type="text"

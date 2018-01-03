@@ -8,11 +8,11 @@ import { postData } from '../utils/Api'
 
 function* logoutWatcher({ url }) {
   try {
-    const response = yield call(() => postData(url))
+    const response = yield call(() => postData(url, null))
 
-    yield put(push('/login'))
+    localStorage.removeItem('jwtToken')
 
-    localStorage.removeItem('token')
+    yield call(push('/login'))
 
     yield delay(500)
 
@@ -22,8 +22,8 @@ function* logoutWatcher({ url }) {
   }
 }
 
-function* LogoutSaga() {
+function* logoutSaga() {
   yield takeLatest(ACCOUNT_UNSET, logoutWatcher)
 }
 
-export default LogoutSaga
+export default logoutSaga
