@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:34:37+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: fingerprint_finger.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T09:52:43+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:08:42+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: finger_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('finger_id', finger_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: fingerprint_finger => {
-    return knex(table).insert(fingerprint_finger, 'id')
+    return knex(table).insert(fingerprint_finger, 'finger_id')
   },
-  update: (id, fingerprint_finger) => {
+  update: (finger_id, fingerprint_finger) => {
     return knex(table)
-      .where('id', id)
-      .update(fingerprint_finger, 'id')
+      .where('finger_id', finger_id)
+      .update(fingerprint_finger, 'finger_id')
   },
-  delete: id => {
+  delete: finger_id => {
     return knex(table)
-      .where('id', id)
+      .where('finger_id', finger_id)
       .del()
   }
 }

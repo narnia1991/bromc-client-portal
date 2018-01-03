@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:36:07+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: medhis_items.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T08:42:24+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:09:20+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: item_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('item_id', item_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: medhis_items => {
-    return knex(table).insert(medhis_items, 'id')
+    return knex(table).insert(medhis_items, 'item_id')
   },
-  update: (id, medhis_items) => {
+  update: (item_id, medhis_items) => {
     return knex(table)
-      .where('id', id)
-      .update(medhis_items, 'id')
+      .where('item_id', item_id)
+      .update(medhis_items, 'item_id')
   },
-  delete: id => {
+  delete: item_id => {
     return knex(table)
-      .where('id', id)
+      .where('item_id', item_id)
       .del()
   }
 }

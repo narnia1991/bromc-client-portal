@@ -2,7 +2,7 @@
 * @Author: Narnia
 * @Date:   2017-12-09 01:05:05
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2017-12-30T03:24:43+08:00
+ * @Last modified time: 2018-01-03T11:10:51+08:00
 */
 import bcrypt from 'bcrypt-nodejs'
 const knex = require('./knex')
@@ -22,6 +22,9 @@ module.exports = {
     return knex(table)
       .select()
       .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
   },
   create: user => {
     console.log(user)

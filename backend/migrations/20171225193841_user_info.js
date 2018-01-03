@@ -3,8 +3,8 @@
  * @Date:   2017-12-26T12:31:09+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20171225193841_user_info.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T04:39:17+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T13:29:21+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -22,6 +22,7 @@ exports.up = function(knex, Promise) {
     t.string('phone_number')
     t.string('cell_number')
     t.string('birth_date')
+    t.string('gender')
     t.string('e_mail')
     t.date('date_created')
     t.date('date_updated')

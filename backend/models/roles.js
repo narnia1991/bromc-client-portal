@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:35:32+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: roles.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T08:42:20+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:09:57+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: role_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('role_id', role_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: roles => {
-    return knex(table).insert(roles, 'id')
+    return knex(table).insert(roles, 'role_id')
   },
-  update: (id, roles) => {
+  update: (role_id, roles) => {
     return knex(table)
-      .where('id', id)
-      .update(roles, 'id')
+      .where('role_id', role_id)
+      .update(roles, 'role_id')
   },
-  delete: id => {
+  delete: role_id => {
     return knex(table)
-      .where('id', id)
+      .where('role_id', role_id)
       .del()
   }
 }

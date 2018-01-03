@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:36:37+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: password_history.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T09:58:04+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:09:39+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: history_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('history_id', history_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: password_history => {
-    return knex(table).insert(password_history, 'id')
+    return knex(table).insert(password_history, 'history_id')
   },
-  update: (id, password_history) => {
+  update: (history_id, password_history) => {
     return knex(table)
-      .where('id', id)
-      .update(password_history, 'id')
+      .where('history_id', history_id)
+      .update(password_history, 'history_id')
   },
-  delete: id => {
+  delete: history_id => {
     return knex(table)
-      .where('id', id)
+      .where('history_id', history_id)
       .del()
   }
 }

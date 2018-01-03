@@ -3,8 +3,8 @@
  * @Date:   2017-12-27T03:36:19+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: thersess_options.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T09:45:18+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T11:07:40+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,23 +15,31 @@ module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: id => {
+  getOne: options_id => {
     return knex(table)
       .select()
-      .where('id', id)
+      .where('options_id', options_id)
       .first()
   },
+  getWhere: where => {
+    return knex(table)
+      .select()
+      .where(where)
+  },
+  getRaw: raw => {
+    return knex.raw(raw)
+  },
   create: thersess_options => {
-    return knex(table).insert(thersess_options, 'id')
+    return knex(table).insert(thersess_options, 'options_id')
   },
-  update: (id, thersess_options) => {
+  update: (options_id, thersess_options) => {
     return knex(table)
-      .where('id', id)
-      .update(thersess_options, 'id')
+      .where('options_id', options_id)
+      .update(thersess_options, 'options_id')
   },
-  delete: id => {
+  delete: options_id => {
     return knex(table)
-      .where('id', id)
+      .where('options_id', options_id)
       .del()
   }
 }

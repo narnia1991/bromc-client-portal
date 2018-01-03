@@ -3,13 +3,14 @@
  * @Date:   2017-12-27T08:55:53+08:00
  * @Email:  junaralinsub2@gmail.com
  * @Filename: user_info.js
- * @Last modified by:   Narnia1991
- * @Last modified time: 2017-12-27T20:11:02+08:00
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T10:06:45+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import * as userInfoModel from '../models/user_info'
-exports.postUserInfo = async (req, res) => {
+
+const postUserInfo = async (req, res) => {
   const user = {
     first_name: req.body.first_name,
     middle_name: req.body.middle_name,
@@ -35,17 +36,18 @@ exports.postUserInfo = async (req, res) => {
   }
 }
 
-exports.getUserInfo = async (req, res) => {
-  console.log(req.params)
+const getUserInfo = async (req, res) => {
   try {
-    const userFetched = await userInfoModel.getOne(req.params.id)
+    const userFetched = await userInfoModel.getOne(req.params.user_id)
     res.json(userFetched)
   } catch (err) {
     res.json(err)
   }
 }
 
-exports.putUserInfo = async (req, res) => {
+const putUserInfo = async (req, res) => {
+  user_id = req.params.user_id
+
   const user = {
     first_name: req.body.first_name,
     middle_name: req.body.middle_name,
@@ -60,9 +62,11 @@ exports.putUserInfo = async (req, res) => {
   }
 
   try {
-    const userCreated = await userInfoModel.update(id, user)
+    const userCreated = await userInfoModel.update(user_id, user)
     res.json(userCreated)
   } catch (err) {
     res.json(err)
   }
 }
+
+module.exports = { getUserInfo, postUserInfo, putUserInfo }

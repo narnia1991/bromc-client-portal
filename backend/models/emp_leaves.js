@@ -1,24 +1,24 @@
 /**
- * @Author: Junar B. Alinsub <Narnia1991>
- * @Date:   2017-12-27T09:51:27+08:00
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-03T06:14:17+08:00
  * @Email:  junaralinsub2@gmail.com
- * @Filename: clinic.js
+ * @Filename: emp_leaves.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T11:06:54+08:00
+ * @Last modified time: 2018-01-03T11:06:57+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 const knex = require('./knex')
-const table = 'clinic'
+const table = 'emp_leaves'
 module.exports = {
   getAll: () => {
     return knex(table).select()
   },
-  getOne: clinic_id => {
+  getOne: leave_id => {
     return knex(table)
       .select()
-      .where('clinic_id', clinic_id)
+      .where('leave_id', leave_id)
       .first()
   },
   getWhere: where => {
@@ -29,31 +29,27 @@ module.exports = {
   getRaw: raw => {
     return knex.raw(raw)
   },
-  create: clinic => {
-    return knex(table).insert(clinic, 'clinic_id')
+  create: emp_leaves => {
+    return knex(table).insert(emp_leaves, 'leave_id')
   },
-  update: (clinic_id, clinic) => {
+  update: (leave_id, emp_leaves) => {
     return knex(table)
-      .where('clinic_id', clinic_id)
-      .update(clinic, 'clinic_id')
+      .where('leave_id', leave_id)
+      .update(emp_leaves, 'leave_id')
   },
-  delete: clinic_id => {
+  delete: leave_id => {
     return knex(table)
-      .where('clinic_id', clinic_id)
+      .where('leave_id', leave_id)
       .del()
   }
 }
 
 const schema = {
-  clinic_id: 0,
-  name: '',
-  address_1: null,
-  address_2: null,
-  city: 0,
-  country: '',
-  phone_number: '',
-  cell_number: '',
+  leave_id: 0,
+  user_id: 0,
+  dates: '',
   status: '',
+  approved_by: '',
   date_created: null,
   date_updated: null,
   date_deactivated: null

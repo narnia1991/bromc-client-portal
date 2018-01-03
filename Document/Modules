@@ -1,0 +1,42 @@
+
+Admin
+-Reports
+--Volume - get
+--Feedback* -get
+
+-Schedule
+--Therapist - update, create, get
+--Client  - update, create, get
+
+-Leaves
+--Overview
+--Requests - update, create, get
+
+-Users
+--Therapists - update, create, get
+--Staff - update, create, get
+
+-Patient Info  - update, create, get
+
+
+Reception
+-Schedule
+--Therapist - update, create, get
+--Client  - update, get
+
+-Patient Info  -  get 
+             update------>indication if cancelled, rescheduled, no show
+
+-Waiting List - get
+         update------>insert to list of scheds
+
+-Apply Leave - create, update, get
+
+Therapist
+-Patient Info - get
+-Schedule -personal -get
+-Apply Leave -get, create, update
+
+Client
+-Info -get, create, update
+-Schedule - get, update for therapist
