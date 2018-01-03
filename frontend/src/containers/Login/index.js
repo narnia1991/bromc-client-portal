@@ -13,6 +13,8 @@ export default class Login extends Component {
   submit = values => {
     const { loginAction } = this.props
 
+    console.log(this.props, 'sadasd')
+
     return loginAction('/api/auth', values, 'LoginForm')
   }
 

@@ -4,10 +4,10 @@ import { Field, reduxForm } from 'redux-form'
 import InputText from '../Forms/InputText'
 
 let LoginForm = props => {
-  const { handleSubmit } = props
+  const { onSubmit, handleSubmit } = props
 
   return (
-    <Form size="large" onSubmit={handleSubmit}>
+    <Form size="large" onSubmit={handleSubmit(onSubmit)}>
       <Segment stacked>
         <Field
           name="userName"
@@ -32,7 +32,7 @@ let LoginForm = props => {
 
 LoginForm = reduxForm({
   // a unique name for the form
-  form: 'login',
+  form: 'LoginForm',
 })(LoginForm)
 
 export default LoginForm
