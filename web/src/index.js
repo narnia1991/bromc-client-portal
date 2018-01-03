@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: index.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:25:44+08:00
+ * @Last modified time: 2018-01-03T20:52:01+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -37,12 +37,12 @@ if (localStorage.jwtToken) SetAuthorizationToken(localStorage.jwtToken)
 ReactDOM.render(
   <Router>
     <div id="body">
-      <Header />
       <Route exact path="/Home" component={Home} />
       <Route exact path="/About" component={About} />
       <Route exact path="/Location" component={Location} />
       <Route exact path="/Login" component={Login} />
       <Route exact path="/SetAppointment" component={SetAppointment} />
+      <Route exact path="/SignUp" component={SignUp} />
       <Route exact path="/Logout" component={Logout} />
       <Route exact path="/ForgotPassword" component={ForgotPassword} />
       <Route path="/client" component={Client} />

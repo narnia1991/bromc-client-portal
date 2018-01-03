@@ -4,13 +4,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Logout.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:32:01+08:00
+ * @Last modified time: 2018-01-03T20:51:24+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React from 'react'
 const handleSubmit = () => {}
-const SignUp = () => {
+const Logout = () => {
   return (
     <div className="ui container ">
       <form className="ui form ">
@@ -31,5 +31,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
-
+export default Logout

@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Header.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:24:43+08:00
+ * @Last modified time: 2018-01-03T21:01:12+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -34,42 +34,27 @@ class Header extends Component {
         />
         <Menu.Item
           as={Link}
-          to="/OurTeam"
-          name="OurTeam"
-          active={activeItem === 'OurTeam'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          as={Link}
           to="/Location"
           name="Locations"
           active={activeItem === 'locations'}
           onClick={this.handleItemClick}
         />
 
-        <Menu.Item
-          as={Link}
-          to="/SetAppointment"
-          name="Set an Appointment"
-          active={activeItem === 'Set an Appointment'}
-          onClick={this.handleItemClick}
-        />
-
         <div class="right menu">
+          <Menu.Item
+            as={Link}
+            to="/SignUp"
+            name="SignUp"
+            visible={() => console.log(this.state.isLoggedIn)}
+            active={activeItem === 'SignUp'}
+            onClick={this.handleItemClick}
+          />
           <Menu.Item
             as={Link}
             to="/Login"
             name="Login"
             visible={() => console.log(this.state.isLoggedIn)}
-            active={activeItem === 'login'}
-            onClick={this.handleItemClick}
-          />
-
-          <Menu.Item
-            as={Link}
-            to="/Logout"
-            name="Logout"
-            active={activeItem === 'logout'}
+            active={activeItem === 'Login'}
             onClick={this.handleItemClick}
           />
         </div>

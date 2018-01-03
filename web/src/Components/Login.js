@@ -4,31 +4,43 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:26:46+08:00
+ * @Last modified time: 2018-01-03T21:02:32+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React, { Component } from 'react'
-import LoginAction from './Actions/Login'
+import Header from './Header'
+import { login } from '../Actions/AuthActions'
+import config from '../config'
 
 export default class Login extends Component {
   state = {}
-  handleLogin = () => {
+  handleLogin = async e => {
     const data = {
       username: this.state.username,
       password: this.state.password
     }
-    console.log(data)
+    console.log('inside Submit')
+    const success = await login(data)
+    if (success) window.location.href = `${config.web}/Client`
   }
   handleInputChange = (name, value) => {
     let newObject = {}
     newObject[name] = value
+    console.log(newObject)
     this.setState(newObject)
   }
   render() {
-    return (
+    return [
+      <Header />,
       <div className="ui container ">
-        <form className="ui form ">
+        <form
+          className="ui form "
+          onSubmit={e => {
+            e.preventDefault()
+            this.handleLogin()
+          }}
+        >
           <h1>Login</h1>
           <div className="field">
             <label>Email</label>
@@ -36,26 +48,31 @@ export default class Login extends Component {
               type="text"
               name="username"
               placeholder="Email"
-              onChange={() => {
-                this.handleInputChange('username', this.value)
+              onChange={e => {
+                e.preventDefault()
+                this.handleInputChange('username', e.target.value)
               }}
             />
           </div>
           <div className="field">
-            <label>Last Name</label>
+            <label>Password</label>
             <input
               type="password"
               name="password"
-              onChange={() => {
-                this.handleInputChange('password', this.value)
+              onChange={e => {
+                e.preventDefault()
+                this.handleInputChange('password', e.target.value)
               }}
             />
           </div>
+          <p>
+            <a href={`${config.web}/ForgotPassword`}>Forgot Password</a>
+          </p>
           <button className="ui button" type="submit">
             login
           </button>
         </form>
       </div>
-    )
+    ]
   }
 }

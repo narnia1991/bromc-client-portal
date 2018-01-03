@@ -4,18 +4,16 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:06:18+08:00
+ * @Last modified time: 2018-01-03T20:03:43+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import axios from 'axios'
 
-const postLogin = (username, password) => {}
-
-import axios from 'axios'
 import config from '../config'
 
 const LoginAction = async data => {
+  console.log(data)
   const login = await axios({
     method: 'post',
     url: `${config.api}/auth`
