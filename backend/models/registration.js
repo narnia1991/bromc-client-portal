@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: registration.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T11:06:19+08:00
+ * @Last modified time: 2018-01-03T22:49:33+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -43,11 +43,15 @@ module.exports = {
       .del()
   }
 }
+
 const schema = {
   registration_id: 0,
   user_id: 0,
   therapist_id: '',
   therapy_options: '',
+  medical_history: '',
+  to: '',
+  from: '',
   clinic: '',
   date_updated_registered: null,
   date_therapy: null,

@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: billing.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T22:31:28+08:00
+ * @Last modified time: 2018-01-04T00:08:44+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -22,8 +22,9 @@ const getBilling = async (req, res) => {
 }
 
 const postBilling = async (req, res) => {
+  console.log(req.body)
   let billing = {
-    user_id: req.currentUser.user_id,
+    user_id: req.params.user_id,
     card_no: req.body.card_no,
     validity: req.body.validity,
     cvv: req.body.cvv,
@@ -40,7 +41,7 @@ const postBilling = async (req, res) => {
 }
 const putBilling = async (req, res) => {
   let billing = {
-    user_id: req.currentUser.user_id,
+    user_id: req.params.user_id,
     card_no: req.body.card_no,
     validity: req.body.validity,
     cvv: req.body.cvv,

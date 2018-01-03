@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20171227094841_clinic.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T14:15:13+08:00
+ * @Last modified time: 2018-01-04T00:36:21+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -20,9 +20,9 @@ exports.up = function(knex, Promise) {
     t.string('phone_number')
     t.string('cell_number')
     t.string('status')
-    t.date('date_created')
-    t.date('date_updated')
-    t.date('date_deactivated')
+    t.dateTime('date_created')
+    t.timestamps('date_updated')
+    t.dateTime('date_deactivated')
   })
 }
 

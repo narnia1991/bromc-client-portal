@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: billing.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T22:22:31+08:00
+ * @Last modified time: 2018-01-04T00:32:20+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -24,6 +24,7 @@ module.exports = {
     return knex(table)
       .select()
       .where(where)
+      .orderBy('date_created', 'desc')
   },
   getRaw: raw => {
     return knex.raw(raw)

@@ -2,7 +2,7 @@
 * @Author: Narnia
 * @Date:   2017-12-08 20:02:08
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T19:42:10+08:00
+ * @Last modified time: 2018-01-03T23:14:15+08:00
 */
 import bodyParser from 'body-parser' //to enable the browser to read json response
 import cors from 'cors' //to enable the frontend app to communicate to this server
@@ -27,6 +27,7 @@ app.all('/*', function(req, res, next) {
   next()
 })
 //routes
+import billing from './routes/billing'
 import country from './routes/country'
 import login from './routes/login'
 import logout from './routes/logout'
@@ -41,6 +42,7 @@ import users from './routes/users'
 
 //API routes
 app.use('/api/auth', cors(), login)
+app.use('/api/billing', cors(), billing)
 app.use('/api/country', cors(), country)
 app.use('/api/medical-history', cors(), medHistory)
 app.use('/api/logout', cors(), logout)

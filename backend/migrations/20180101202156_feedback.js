@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20180101202156_feedback.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T08:25:52+08:00
+ * @Last modified time: 2018-01-04T00:33:46+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -17,9 +17,9 @@ exports.up = function(knex, Promise) {
     t.boolean('status_admin')
     t.boolean('status_client')
     t.integer('read_by')
-    t.date('date_created')
-    t.date('date_modified_admin')
-    t.date('date_modified_client')
+    t.dateTime('date_created')
+    t.dateTime('date_modified_admin')
+    t.dateTime('date_modified_client')
   })
 }
 

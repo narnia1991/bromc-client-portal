@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20180101201357_emp_leaves.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T11:41:12+08:00
+ * @Last modified time: 2018-01-04T00:36:24+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -15,9 +15,9 @@ exports.up = function(knex, Promise) {
     t.string('dates')
     t.string('status')
     t.integer('approved_by')
-    t.date('date_created')
-    t.date('date_updated')
-    t.date('date_deactivated')
+    t.dateTime('date_created')
+    t.timestamps('date_updated')
+    t.dateTime('date_deactivated')
   })
 }
 

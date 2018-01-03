@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20171225193841_user_info.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T13:29:21+08:00
+ * @Last modified time: 2018-01-04T00:35:13+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -24,9 +24,9 @@ exports.up = function(knex, Promise) {
     t.string('birth_date')
     t.string('gender')
     t.string('e_mail')
-    t.date('date_created')
-    t.date('date_updated')
-    t.date('date_deactivated')
+    t.dateTime('date_created')
+    t.dateTime('date_updated')
+    t.dateTime('date_deactivated')
   })
 }
 
