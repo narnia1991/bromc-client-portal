@@ -23,5 +23,5 @@ export const login = async data => {
   const token = res.data.token
   localStorage.setItem('jwtToken', token)
   SetAuthorizationToken(token)
-  console.log(jwtDecode(token))
+  console.log(jwtDecode(token)) // token includes role, user_id, display_name
 }

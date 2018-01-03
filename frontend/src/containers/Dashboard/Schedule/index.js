@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import Tabs from '../../../components/Tabs'
 
-import Volume from './Volume'
-import Feedback from './Feedback'
+import Client from './Client'
+import Employee from './Employee'
 
-export default class Reports extends Component {
+export default class Schedule extends Component {
   static propTypes = {}
 
-  state = { activeItem: 'volume' }
+  state = { activeItem: 'client' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -18,9 +19,9 @@ export default class Reports extends Component {
     return (
       <Tabs
         show={this.handleItemClick}
-        tabs={[{ name: 'volume' }, { name: 'feedback' }]}
+        tabs={[{ name: 'client' }, { name: 'employee' }]}
         activeItem={activeItem}
-        tabComponent={activeItem === 'volume' ? Volume : Feedback}
+        tabComponent={activeItem === 'client' ? Client : Employee}
       />
     )
   }

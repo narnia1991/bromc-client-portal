@@ -5,29 +5,13 @@ import asyncComponent from './containers/AsyncComponent'
 import PageNotFound from './components/PageNotFound'
 import Layout from './components/Layout'
 
-const AsyncLogin = asyncComponent(() => import('./components/Login'))
+const AsyncLogin = asyncComponent(() => import('./containers/Login'))
 const AsyncDashboard = asyncComponent(() => import('./containers/Dashboard'))
 
 class App extends Component {
   state = { activeItem: 'home', visible: false, icon: 'content', dateTime: '' }
 
   previousLocation = this.props.location
-
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps, 'nextProps')
-  }
-
-  // componentWillUpdate(nextProps) {
-  //   const { location } = this.props
-  //   console.log(nextProps.history, 'JAJAKAJAJJAKAJAJ')
-
-  //   // if (
-  //   //   nextProps.history.action !== 'POP' &&
-  //   //   (!location.state || !location.state.error)
-  //   // ) {
-  //   //   this.previousLocation = this.props.location
-  //   // }
-  // }
 
   toggleVisibility = () =>
     this.setState({
@@ -47,6 +31,13 @@ class App extends Component {
           <Route component={PageNotFound} />
         ) : (
           <Switch location={isError ? this.previousLocation : location}>
+            <Layout
+              path="/dashboard"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
             <Layout
               path="/reports"
               routeComponent={AsyncDashboard}
@@ -68,7 +59,20 @@ class App extends Component {
               visibility={() => this.toggleVisibility}
               icon={icon}
             />
-
+            <Layout
+              path="/clients"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
+            <Layout
+              path="/leaves"
+              routeComponent={AsyncDashboard}
+              visible={visible}
+              visibility={() => this.toggleVisibility}
+              icon={icon}
+            />
             <Route exact path="/" component={AsyncLogin} />
           </Switch>
         )}

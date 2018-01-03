@@ -1,0 +1,3 @@
+https://github.com/jcolemorrison/redux-sagas-authentication-app
+
+https://redux-form.com/7.2.0/docs/gettingstarted.md/
