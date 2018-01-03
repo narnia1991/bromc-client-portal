@@ -33,7 +33,7 @@ import SetAppointment from './Components/SetAppointment'
 
 ReactDOM.render(
   <Router>
-    <div>
+    <div id="body">
       <Header />
       <Route exact path="/Home" component={Home} />
       <Route exact path="/About" component={About} />

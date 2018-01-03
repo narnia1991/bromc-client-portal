@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "google-map-react": "^0.26.0",
     "next": "^4.2.1",
     "react": "^16.2.0",
     "react-country-region-selector": "^1.2.3",

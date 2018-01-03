@@ -16,11 +16,7 @@ const CardExampleGroups = () => (
   <Card.Group>
     <Card>
       <Card.Content>
-        <Image
-          floated="right"
-          size="mini"
-          src="/assets/images/avatar/large/steve.jpg"
-        />
+        <Image floated="right" size="mini" src="./elliot.jpg" />
         <Card.Header>Steve Sanders</Card.Header>
         <Card.Meta>Friends of Elliot</Card.Meta>
         <Card.Description>
