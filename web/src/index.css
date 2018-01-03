@@ -1,6 +1,23 @@
+/**
+ * @Author: Junar B. Alinsub
+ * @Date:   2018-01-01T19:15:11+08:00
+ * @Email:  junaralinsub2@gmail.com
+ * @Filename: index.css
+ * @Last modified by:   Junar B. Alinsub
+ * @Last modified time: 2018-01-03T17:07:08+08:00
+ * @License: MIT
+ * @Copyright: use it however you like, just buy me coffee next time
+ */
+
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: blue;
+}
+
+.login-container{
+  padding-top: 10vh;
 }

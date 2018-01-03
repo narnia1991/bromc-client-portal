@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Header.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T16:07:08+08:00
+ * @Last modified time: 2018-01-03T17:24:43+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'
 class Header extends Component {
   constructor(props) {
     super(props)
-    this.state = { term: '' }
+    this.state = { term: '', isLoggedIn: true }
   }
   render() {
     const { activeItem } = this.state
@@ -28,31 +28,58 @@ class Header extends Component {
         <Menu.Item
           as={Link}
           to="/Home"
-          name="home"
+          name="Home"
           active={activeItem === 'Home'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
           as={Link}
           to="/About"
-          name="aboutUs"
-          active={activeItem === 'aboutUs'}
+          name="AboutUs"
+          active={activeItem === 'AboutUs'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          as={Link}
+          to="/OurTeam"
+          name="OurTeam"
+          active={activeItem === 'OurTeam'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
           as={Link}
           to="/Location"
-          name="locations"
+          name="Locations"
           active={activeItem === 'locations'}
           onClick={this.handleItemClick}
         />
+
         <Menu.Item
           as={Link}
-          to="/Login"
-          name="login"
-          active={activeItem === 'login'}
+          to="/SetAppointment"
+          name="Set an Appointment"
+          active={activeItem === 'Set an Appointment'}
           onClick={this.handleItemClick}
         />
+
+        <div class="right menu">
+          <Menu.Item
+            as={Link}
+            to="/Login"
+            name="Login"
+            visible={() => console.log(this.state.isLoggedIn)}
+            active={activeItem === 'login'}
+            onClick={this.handleItemClick}
+          />
+
+          <Menu.Item
+            as={Link}
+            to="/Logout"
+            name="Logout"
+            active={activeItem === 'logout'}
+            onClick={this.handleItemClick}
+          />
+        </div>
       </Menu>
     )
   }

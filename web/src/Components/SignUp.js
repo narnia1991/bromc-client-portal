@@ -4,13 +4,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:11:03+08:00
+ * @Last modified time: 2018-01-03T17:27:29+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 import React from 'react'
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div className="ui container ">
       <form className="ui form ">
@@ -31,4 +31,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignUp

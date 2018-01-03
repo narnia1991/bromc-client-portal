@@ -4,13 +4,12 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Location.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T16:04:00+08:00
+ * @Last modified time: 2018-01-03T16:55:38+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Embed } from 'semantic-ui-react'
 const Location = () => (
   <div>
