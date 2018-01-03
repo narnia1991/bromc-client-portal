@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import { Grid, Header } from 'semantic-ui-react'
 import LoginForm from '../../components/LoginForm'
+import { loginAction, loginResetAction } from '../../actions/LoginAction'
 
 export default class Login extends Component {
-  submit = values => {
-    // print the form values to the console
-    console.log(values)
+  componentWillUnmount() {
+    this.props.loginResetAction()
   }
+
+  submit = values => {
+    const { loginAction } = this.props
+
+    return loginAction('/api/auth', values, 'LoginForm')
+  }
+
   render() {
     return (
       <div className="login-form">
@@ -38,3 +47,11 @@ export default class Login extends Component {
     )
   }
 }
+
+Login = connect(
+  state => ({
+    loginStatus: state.login,
+    // pull initial values from account reducer
+  }),
+  { loginAction, loginResetAction } // bind account loading action creator
+)(Login)

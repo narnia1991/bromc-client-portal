@@ -14,7 +14,7 @@ import { postData } from '../utils/Api'
 
 function* loginFlow({ url, values, formName }) {
   try {
-    const response = yield call(() => postData('/api/auth', values))
+    const response = yield call(() => postData(url, values))
 
     const token = response.data.token
     localStorage.setItem('jwtToken', token)
