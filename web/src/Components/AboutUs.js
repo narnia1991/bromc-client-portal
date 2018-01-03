@@ -4,27 +4,34 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AboutUs.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T17:47:16+08:00
+ * @Last modified time: 2018-01-03T18:55:08+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React from 'react'
-const image = '../Images/Home.png'
-const About = () => (
+export const About = () => (
   <div className="ui text container">
-    <img className="landing-image" src={image} />
-    <h1 className="ui dividing header">Welcome to BROMC</h1>
+    <h1 className="ui dividing header">
+      Welcome to{' '}
+      <img width="300" height="200" src={require('../Images/Logo.png')} />
+    </h1>
     <h3 className="first">About us</h3>
-    <p align="center">
+    <p align="auto">
       BROMC Big River Orthopedic Massage Clinic (BROMC) is an Ortho therapeutic
       massage provide services for an accident, work, sports injuries and
       age-ing and disease pain relief. Also, they do maintenance therapeutic
       massage for people in stress-related lifestyle and relaxing massage for
       the general public. The company is fully qualified to do these things and
       are recognized by the medical profession and the medical insurance
-      industry. Peter W. Lock 67 years old the owner of BROMC..
+      industry. Peter W. Lock 67 years old the owner of BROMC.
     </p>
+    <img
+      align="center"
+      width="650"
+      height="400"
+      src={require('../Images/Home.jpg')}
+    />
   </div>
 )
 

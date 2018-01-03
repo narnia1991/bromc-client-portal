@@ -1,20 +1,30 @@
 import React, { Component } from 'react'
 import { Menu, Input, Icon, Image } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
-export default class MenuExampleHeader extends Component {
-  state = {}
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
+class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { term: '' }
+  }
   render() {
     const { activeItem } = this.state
-
     return (
       <Menu>
         <Menu.Item header>
           <Icon name="home" size="large" />Big River Orthopedic Massage Clinic
         </Menu.Item>
         <Menu.Item
+          as={Link}
+          to="/Home"
+          name="Home"
+          active={activeItem === 'Home'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          as={Link}
+          to="/Location"
           name="locations"
           active={activeItem === 'locations'}
           onClick={this.handleItemClick}
@@ -24,10 +34,8 @@ export default class MenuExampleHeader extends Component {
           active={activeItem === 'Set an appointment'}
           onClick={this.handleItemClick}
         />
-        <Menu.Item position="right">
-          <Input className="icon" icon="search" placeholder="Search..." />
-        </Menu.Item>
       </Menu>
     )
   }
 }
+export default Header
