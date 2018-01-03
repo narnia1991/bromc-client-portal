@@ -2,10 +2,10 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Menu, Input, Icon, Image, Grid } from 'semantic-ui-react'
 
-export const About = () => (
+export const Home = () => (
   <div class="ui text container">
     <h1 class="ui dividing header">Welcome to BROMC</h1>
-    <h3 class="first">About us</h3>
+    <h3 class="first">About ussssa</h3>
     <p align="center">
       BROMC Big River Orthopedic Massage Clinic (BROMC) is an Ortho therapeutic
       massage provide services for an accident, work, sports injuries and
@@ -17,3 +17,4 @@ export const About = () => (
     </p>
   </div>
 )
+
