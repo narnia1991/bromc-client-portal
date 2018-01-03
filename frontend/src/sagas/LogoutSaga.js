@@ -10,7 +10,7 @@ function* logoutWatcher({ url }) {
   try {
     const response = yield call(() => postData(url, null))
 
-    localStorage.removeItem('jwtToken')
+    localStorage.setItem('jwtToken', '')
 
     yield call(push('/login'))
 

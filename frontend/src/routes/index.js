@@ -1,3 +1,4 @@
+import { getRole } from '../utils/userLoader'
 import asyncComponent from '../containers/AsyncComponent'
 
 const AsyncDashboard = asyncComponent(() =>
@@ -34,28 +35,28 @@ const routes = [
     name: 'Reports',
     path: '/reports',
     exact: true,
-    access: true,
+    access: getRole('reports'),
     component: AsyncReports,
   },
   {
     name: 'Schedule',
     path: '/schedule',
     exact: true,
-    access: true,
+    access: getRole('schedule'),
     component: AsyncSchedule,
     subRoute: [
       {
         name: 'Schedule',
         rootPath: '/schedule',
         exact: true,
-        access: true,
+        access: getRole('schedule'),
         component: AsyncSchedule,
       },
       {
         name: 'Create Schedule',
         path: 'create',
         exact: true,
-        access: true,
+        access: getRole('create'),
         component: AsyncScheduleCreate,
       },
     ],
@@ -64,21 +65,21 @@ const routes = [
     name: 'Leaves',
     path: '/leaves',
     exact: true,
-    access: true,
+    access: getRole('leaves'),
     component: AsyncLeaves,
   },
   {
     name: 'Accounts',
     path: '/accounts',
     exact: true,
-    access: true,
+    access: getRole('accounts'),
     component: AsyncAccounts,
   },
   {
     name: 'Clients',
     path: '/clients',
     exact: true,
-    access: true,
+    access: getRole('clients'),
     component: AsyncClients,
   },
 ]
