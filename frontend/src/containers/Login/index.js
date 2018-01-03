@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import jwtDecode from 'jwt-decode'
 
 import { Grid, Header } from 'semantic-ui-react'
 import LoginForm from '../../components/LoginForm'
 import { loginAction, loginResetAction } from '../../actions/LoginAction'
 
-export default class Login extends Component {
+class Login extends Component {
   componentWillUnmount() {
     this.props.loginResetAction()
   }
@@ -13,9 +14,7 @@ export default class Login extends Component {
   submit = values => {
     const { loginAction } = this.props
 
-    console.log(this.props, 'sadasd')
-
-    return loginAction('/api/auth', values, 'LoginForm')
+    return loginAction('auth', values, 'LoginForm')
   }
 
   render() {
@@ -57,3 +56,5 @@ Login = connect(
   }),
   { loginAction, loginResetAction } // bind account loading action creator
 )(Login)
+
+export default Login

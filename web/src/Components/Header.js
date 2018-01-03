@@ -4,15 +4,14 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Header.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T21:01:12+08:00
+ * @Last modified time: 2018-01-03T21:24:34+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React, { Component } from 'react'
-import { Menu, Input, Icon, Image } from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import Home from './Home'
 class Header extends Component {
   constructor(props) {
     super(props)

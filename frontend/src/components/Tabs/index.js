@@ -27,9 +27,7 @@ export default function Tabs(propTypes) {
           )
         })}
       </Menu>
-      <Segment>
-        <Component {...propTypes} />
-      </Segment>
+      <Component {...propTypes} />
     </div>
   )
 }

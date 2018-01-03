@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: 20180101202156_feedback.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T08:27:27+08:00
+ * @Last modified time: 2018-01-03T22:21:59+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -14,9 +14,9 @@ exports.up = function(knex, Promise) {
     t.integer('user_id')
     t.string('card_no')
     t.string('validity')
-    t.boolean('cvv')
-    t.boolean('name')
-    t.integer('address')
+    t.string('cvv')
+    t.string('name')
+    t.string('address')
     t.date('date_created')
     t.date('date_modified')
     t.date('date_deactivated')

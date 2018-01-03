@@ -4,13 +4,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Header.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T20:50:23+08:00
+ * @Last modified time: 2018-01-03T21:54:35+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React, { Component } from 'react'
-import { Menu, Input, Icon, Image } from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 class Header extends Component {

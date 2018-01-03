@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AuthActions.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T20:30:12+08:00
+ * @Last modified time: 2018-01-03T21:45:20+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -14,14 +14,13 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AuthActions.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T20:30:12+08:00
+ * @Last modified time: 2018-01-03T21:45:20+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import axios from 'axios'
 import config from '../config'
-import jwtDecode from 'jwt-decode'
 import SetAuthorizationToken from '../utils/SetAuthorizationToken'
 
 export const logout = () => {

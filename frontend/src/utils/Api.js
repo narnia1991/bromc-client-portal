@@ -1,13 +1,11 @@
 import axios from 'axios'
 import { getCookie } from './cookieLoader'
 
-axios.defaults.baseURL = ''
-axios.defaults.headers.post['Content-Type'] = 'application/json'
+axios.defaults.baseURL = 'http://172.104.30.86:8008/api'
 
 export async function tableData(url, params) {
   const res = await axios.get(url, {
     params,
-    headers: { 'X-Auth-Token': getCookie() },
   })
 
   const data = res.data
@@ -16,7 +14,7 @@ export async function tableData(url, params) {
 }
 
 export async function viewData(url) {
-  const res = await axios.get(url, { headers: { 'X-Auth-Token': getCookie() } })
+  const res = await axios.get(url)
 
   const data = res.data
 
@@ -29,15 +27,11 @@ export async function postData(url, values) {
 }
 
 export async function putData(url, values, token) {
-  let response = await axios.put(url, values, {
-    headers: { 'X-Auth-Token': token ? getCookie() : null },
-  })
+  let response = await axios.put(url, values)
   return response
 }
 
 export async function deleteItem(url) {
-  let response = await axios.delete(url, {
-    headers: { 'X-Auth-Token': getCookie() && getCookie() },
-  })
+  let response = await axios.delete(url)
   return response
 }

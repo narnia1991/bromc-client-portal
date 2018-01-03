@@ -19,6 +19,18 @@ class App extends Component {
       icon: this.state.icon === 'content' ? 'close' : 'content',
     })
 
+  componentWillUpdate(nextProps) {
+    const { location } = this.props
+
+    if (
+      nextProps.history &&
+      nextProps.history.action !== 'POP' &&
+      (!location.state || !location.state.error)
+    ) {
+      this.previousLocation = this.props.location
+    }
+  }
+
   render() {
     const { location } = this.props
     const { activeItem, visible, icon, dateTime } = this.state
@@ -73,7 +85,7 @@ class App extends Component {
               visibility={() => this.toggleVisibility}
               icon={icon}
             />
-            <Route exact path="/" component={AsyncLogin} />
+            <Route exact path="/login" component={AsyncLogin} />
           </Switch>
         )}
       </div>

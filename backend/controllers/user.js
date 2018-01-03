@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: user.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T18:34:46+08:00
+ * @Last modified time: 2018-01-03T20:26:24+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -54,7 +54,7 @@ const getUser = async (req, res) => {
 
 const login = async (req, res) => {
   const { username, password } = req.body
-
+  console.log(req.body)
   try {
     const userFetched = await userModel.getWhere({ username: username })
     // No user found with that username

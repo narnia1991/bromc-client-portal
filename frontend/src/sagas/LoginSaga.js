@@ -2,6 +2,7 @@ import { delay } from 'redux-saga'
 import { call, cancelled, takeLatest, put } from 'redux-saga/effects'
 import { push } from 'react-router-redux'
 import { stopSubmit } from 'redux-form'
+import jwtDecode from 'jwt-decode'
 
 import {
   USER_LOGIN,
@@ -17,6 +18,7 @@ function* loginFlow({ url, values, formName }) {
     const response = yield call(() => postData(url, values))
 
     const token = response.data.token
+
     localStorage.setItem('jwtToken', token)
     SetAuthorizationToken(token)
 
@@ -26,14 +28,7 @@ function* loginFlow({ url, values, formName }) {
 
     yield put({ type: USER_LOGIN_SUCCESS })
 
-    if (
-      response.data.data.first_login === true ||
-      response.data.data.first_login === 1
-    ) {
-      yield put(push('/change-password'))
-    } else {
-      yield put(push('/dashboard'))
-    }
+    yield put(push('/dashboard'))
   } catch (error) {
     yield put({ type: USER_LOGIN_ERROR, payload: error.message })
 
