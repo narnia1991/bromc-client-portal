@@ -41,6 +41,7 @@ function InputText({
 }) {
   return (
     <Form.Field>
+      {label && <label htmlFor={input.name}>{label}</label>}
       <Input
         autoFocus={autoFocus && autoFocus}
         {...input}

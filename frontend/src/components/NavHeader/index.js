@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
 import { Menu, Icon } from 'semantic-ui-react'
 import { getDateTime } from '../../utils/dateLoader'
 import { Link } from 'react-router-dom'
+import { unsetAccount } from '../../actions/AccountAction'
 
-export default class NavHeader extends Component {
+import history from '../../history'
+
+class NavHeader extends Component {
   state = { activeItem: 'home', icon: 'content', dateTime: '' }
 
   componentDidMount() {
@@ -16,6 +21,17 @@ export default class NavHeader extends Component {
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  handleLogout = () => {
+    this.props.unsetAccount('/logout')
+
+    localStorage.removeItem('jwtToken')
+
+    const token = localStorage.getItem('jwtToken')
+    if (!token) {
+      history.push('/login')
+    }
+  }
 
   render() {
     const { visibility, icon } = this.props
@@ -52,10 +68,20 @@ export default class NavHeader extends Component {
           <Menu.Item
             name="logout"
             active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
+            onClick={this.handleLogout}
           />
         </Menu.Menu>
       </Menu>
     )
   }
 }
+
+NavHeader = connect(
+  state => ({
+    access: state.access,
+    // pull initial values from account reducer
+  }),
+  { unsetAccount } // bind account loading action creator
+)(NavHeader)
+
+export default NavHeader

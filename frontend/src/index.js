@@ -8,6 +8,7 @@ import createHistory from 'history/createBrowserHistory'
 import SetAuthorizationToken from './utils/SetAuthorizationToken'
 
 import 'semantic-ui-css/semantic.min.css'
+import 'react-datepicker/dist/react-datepicker.css'
 import App from './App'
 
 import history from './history'
