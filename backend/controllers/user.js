@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: user.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T14:52:32+08:00
+ * @Last modified time: 2018-01-03T18:34:46+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -75,6 +75,7 @@ const login = async (req, res) => {
         },
         config.SECRET
       )
+      console.log(jwt.decode(token))
       return res.status(200).json({ token })
       return res.status(401).json({ error: 'Invalid Credentials' })
     }

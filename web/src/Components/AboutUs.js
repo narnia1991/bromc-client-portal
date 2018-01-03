@@ -4,16 +4,12 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: AboutUs.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T16:05:44+08:00
+ * @Last modified time: 2018-01-03T18:55:08+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
 
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Menu, Input, Icon, Image, Grid, iFrame } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
-
 export const About = () => (
   <div className="ui text container">
     <h1 className="ui dividing header">
