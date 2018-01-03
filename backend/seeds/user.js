@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: user.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T14:19:22+08:00
+ * @Last modified time: 2018-01-03T16:40:01+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -22,10 +22,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Taylor Newman',
-          role: 'client',
+          role: 'admin',
           status: 'deactivated',
-          date_created: '1/22/2014',
-          date_updated: '1/22/2014'
+          date_created: '2014/07/25',
+          date_updated: '2014/07/25'
         },
         {
           user_info_id: 2,
@@ -33,10 +33,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Karina Cochran',
-          role: 'reception',
-          status: 'active',
-          date_created: '1/6/2014',
-          date_updated: '1/6/2014'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2012/05/01',
+          date_updated: '2012/05/01'
         },
         {
           user_info_id: 3,
@@ -44,10 +44,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Harriett Boone',
-          role: 'therapist',
-          status: 'hardlocked',
-          date_created: '9/9/2011',
-          date_updated: '9/9/2011'
+          role: 'admin',
+          status: 'disabled',
+          date_created: '2014/07/19',
+          date_updated: '2014/07/19'
         },
         {
           user_info_id: 4,
@@ -56,9 +56,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Montoya Oliver',
           role: 'client',
-          status: 'deactivated',
-          date_created: '9/17/2017',
-          date_updated: '9/17/2017'
+          status: 'temporary',
+          date_created: '2016/06/13',
+          date_updated: '2016/06/13'
         },
         {
           user_info_id: 5,
@@ -66,10 +66,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Genevieve Odom',
-          role: 'reception',
-          status: 'hardlocked',
-          date_created: '2/26/2017',
-          date_updated: '2/26/2017'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2012/04/27',
+          date_updated: '2012/04/27'
         },
         {
           user_info_id: 6,
@@ -79,8 +79,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Karin Maddox',
           role: 'client',
           status: 'disabled',
-          date_created: '8/26/2011',
-          date_updated: '8/26/2011'
+          date_created: '2014/05/31',
+          date_updated: '2014/05/31'
         },
         {
           user_info_id: 7,
@@ -89,9 +89,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Ada Potter',
           role: 'client',
-          status: 'hardlocked',
-          date_created: '8/29/2013',
-          date_updated: '8/29/2013'
+          status: 'active',
+          date_created: '2016/11/06',
+          date_updated: '2016/11/06'
         },
         {
           user_info_id: 8,
@@ -99,10 +99,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Fletcher Combs',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '10/25/2012',
-          date_updated: '10/25/2012'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2013/02/26',
+          date_updated: '2013/02/26'
         },
         {
           user_info_id: 9,
@@ -110,10 +110,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mcguire Cabrera',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '7/4/2010',
-          date_updated: '7/4/2010'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2014/06/07',
+          date_updated: '2014/06/07'
         },
         {
           user_info_id: 10,
@@ -123,8 +123,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Addie Bradford',
           role: 'client',
           status: 'temporary',
-          date_created: '6/12/2017',
-          date_updated: '6/12/2017'
+          date_created: '2017/07/18',
+          date_updated: '2017/07/18'
         },
         {
           user_info_id: 11,
@@ -132,10 +132,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Augusta Graham',
-          role: 'therapist',
-          status: 'active',
-          date_created: '8/9/2013',
-          date_updated: '8/9/2013'
+          role: 'client',
+          status: 'softlocked',
+          date_created: '2017/11/17',
+          date_updated: '2017/11/17'
         },
         {
           user_info_id: 12,
@@ -144,9 +144,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Chrystal Vega',
           role: 'therapist',
-          status: 'hardlocked',
-          date_created: '12/8/2017',
-          date_updated: '12/8/2017'
+          status: 'temporary',
+          date_created: '2010/08/26',
+          date_updated: '2010/08/26'
         },
         {
           user_info_id: 13,
@@ -154,10 +154,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Cobb Larsen',
-          role: 'reception',
+          role: 'client',
           status: 'disabled',
-          date_created: '11/23/2017',
-          date_updated: '11/23/2017'
+          date_created: '2016/12/28',
+          date_updated: '2016/12/28'
         },
         {
           user_info_id: 14,
@@ -165,10 +165,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Audra Flores',
-          role: 'client',
+          role: 'admin',
           status: 'active',
-          date_created: '3/18/2015',
-          date_updated: '3/18/2015'
+          date_created: '2012/01/26',
+          date_updated: '2012/01/26'
         },
         {
           user_info_id: 15,
@@ -176,10 +176,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mack Espinoza',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '6/21/2014',
-          date_updated: '6/21/2014'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2011/11/08',
+          date_updated: '2011/11/08'
         },
         {
           user_info_id: 16,
@@ -188,9 +188,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Bobbi Bridges',
           role: 'therapist',
-          status: 'temporary',
-          date_created: '3/24/2015',
-          date_updated: '3/24/2015'
+          status: 'deactivated',
+          date_created: '2010/02/03',
+          date_updated: '2010/02/03'
         },
         {
           user_info_id: 17,
@@ -198,10 +198,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Thelma Pollard',
-          role: 'client',
-          status: 'deactivated',
-          date_created: '9/29/2013',
-          date_updated: '9/29/2013'
+          role: 'admin',
+          status: 'disabled',
+          date_created: '2015/05/17',
+          date_updated: '2015/05/17'
         },
         {
           user_info_id: 18,
@@ -209,10 +209,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Meghan Snider',
-          role: 'client',
-          status: 'deactivated',
-          date_created: '6/16/2013',
-          date_updated: '6/16/2013'
+          role: 'reception',
+          status: 'softlocked',
+          date_created: '2015/08/24',
+          date_updated: '2015/08/24'
         },
         {
           user_info_id: 19,
@@ -220,10 +220,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sarah Hoffman',
-          role: 'admin',
-          status: 'disabled',
-          date_created: '7/16/2017',
-          date_updated: '7/16/2017'
+          role: 'reception',
+          status: 'deactivated',
+          date_created: '2013/01/13',
+          date_updated: '2013/01/13'
         },
         {
           user_info_id: 20,
@@ -232,9 +232,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Stevens Baxter',
           role: 'client',
-          status: 'active',
-          date_created: '3/29/2015',
-          date_updated: '3/29/2015'
+          status: 'hardlocked',
+          date_created: '2011/01/28',
+          date_updated: '2011/01/28'
         },
         {
           user_info_id: 21,
@@ -242,10 +242,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Juana Fuller',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '2/4/2014',
-          date_updated: '2/4/2014'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2017/09/07',
+          date_updated: '2017/09/07'
         },
         {
           user_info_id: 22,
@@ -253,10 +253,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Loraine Thomas',
-          role: 'client',
-          status: 'deactivated',
-          date_created: '10/13/2015',
-          date_updated: '10/13/2015'
+          role: 'admin',
+          status: 'softlocked',
+          date_created: '2017/06/28',
+          date_updated: '2017/06/28'
         },
         {
           user_info_id: 23,
@@ -265,9 +265,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Deirdre Mcclain',
           role: 'client',
-          status: 'temporary',
-          date_created: '3/10/2014',
-          date_updated: '3/10/2014'
+          status: 'disabled',
+          date_created: '2010/11/23',
+          date_updated: '2010/11/23'
         },
         {
           user_info_id: 24,
@@ -275,10 +275,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lelia Burris',
-          role: 'admin',
-          status: 'disabled',
-          date_created: '5/16/2013',
-          date_updated: '5/16/2013'
+          role: 'therapist',
+          status: 'deactivated',
+          date_created: '2016/03/01',
+          date_updated: '2016/03/01'
         },
         {
           user_info_id: 25,
@@ -286,10 +286,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Owens Mcleod',
-          role: 'admin',
+          role: 'client',
           status: 'active',
-          date_created: '4/27/2017',
-          date_updated: '4/27/2017'
+          date_created: '2017/01/25',
+          date_updated: '2017/01/25'
         },
         {
           user_info_id: 26,
@@ -297,10 +297,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Valenzuela Roth',
-          role: 'client',
-          status: 'active',
-          date_created: '1/11/2014',
-          date_updated: '1/11/2014'
+          role: 'reception',
+          status: 'deactivated',
+          date_created: '2014/09/02',
+          date_updated: '2014/09/02'
         },
         {
           user_info_id: 27,
@@ -308,10 +308,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Angela Owens',
-          role: 'therapist',
-          status: 'active',
-          date_created: '3/24/2011',
-          date_updated: '3/24/2011'
+          role: 'admin',
+          status: 'hardlocked',
+          date_created: '2016/12/14',
+          date_updated: '2016/12/14'
         },
         {
           user_info_id: 28,
@@ -319,10 +319,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Daugherty Downs',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '9/29/2010',
-          date_updated: '9/29/2010'
+          role: 'therapist',
+          status: 'softlocked',
+          date_created: '2012/11/09',
+          date_updated: '2012/11/09'
         },
         {
           user_info_id: 29,
@@ -330,10 +330,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Page Maxwell',
-          role: 'admin',
-          status: 'softlocked',
-          date_created: '2/21/2016',
-          date_updated: '2/21/2016'
+          role: 'reception',
+          status: 'disabled',
+          date_created: '2015/02/25',
+          date_updated: '2015/02/25'
         },
         {
           user_info_id: 30,
@@ -341,10 +341,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Barber Kerr',
-          role: 'therapist',
+          role: 'reception',
           status: 'softlocked',
-          date_created: '6/1/2014',
-          date_updated: '6/1/2014'
+          date_created: '2010/11/17',
+          date_updated: '2010/11/17'
         },
         {
           user_info_id: 31,
@@ -353,9 +353,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Dotson Holland',
           role: 'client',
-          status: 'disabled',
-          date_created: '10/16/2010',
-          date_updated: '10/16/2010'
+          status: 'softlocked',
+          date_created: '2016/06/24',
+          date_updated: '2016/06/24'
         },
         {
           user_info_id: 32,
@@ -363,10 +363,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Karyn Leon',
-          role: 'reception',
-          status: 'softlocked',
-          date_created: '12/16/2011',
-          date_updated: '12/16/2011'
+          role: 'admin',
+          status: 'deactivated',
+          date_created: '2014/08/22',
+          date_updated: '2014/08/22'
         },
         {
           user_info_id: 33,
@@ -374,10 +374,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Elvira Solomon',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '12/28/2011',
-          date_updated: '12/28/2011'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2017/11/19',
+          date_updated: '2017/11/19'
         },
         {
           user_info_id: 34,
@@ -385,10 +385,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Cooke Mullins',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '5/10/2014',
-          date_updated: '5/10/2014'
+          role: 'client',
+          status: 'softlocked',
+          date_created: '2013/05/07',
+          date_updated: '2013/05/07'
         },
         {
           user_info_id: 35,
@@ -396,10 +396,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Margret Stone',
-          role: 'client',
+          role: 'admin',
           status: 'active',
-          date_created: '11/30/2016',
-          date_updated: '11/30/2016'
+          date_created: '2016/03/31',
+          date_updated: '2016/03/31'
         },
         {
           user_info_id: 36,
@@ -408,9 +408,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Jenny Frederick',
           role: 'admin',
-          status: 'disabled',
-          date_created: '9/11/2011',
-          date_updated: '9/11/2011'
+          status: 'hardlocked',
+          date_created: '2016/11/08',
+          date_updated: '2016/11/08'
         },
         {
           user_info_id: 37,
@@ -418,10 +418,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Nash Oneil',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '10/24/2016',
-          date_updated: '10/24/2016'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2012/01/06',
+          date_updated: '2012/01/06'
         },
         {
           user_info_id: 38,
@@ -430,9 +430,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sallie Jones',
           role: 'admin',
-          status: 'softlocked',
-          date_created: '12/16/2013',
-          date_updated: '12/16/2013'
+          status: 'hardlocked',
+          date_created: '2016/01/13',
+          date_updated: '2016/01/13'
         },
         {
           user_info_id: 39,
@@ -440,10 +440,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Rosario Pacheco',
-          role: 'client',
-          status: 'disabled',
-          date_created: '1/12/2011',
-          date_updated: '1/12/2011'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2013/05/14',
+          date_updated: '2013/05/14'
         },
         {
           user_info_id: 40,
@@ -451,10 +451,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Irma Flores',
-          role: 'therapist',
+          role: 'admin',
           status: 'active',
-          date_created: '4/8/2016',
-          date_updated: '4/8/2016'
+          date_created: '2010/12/14',
+          date_updated: '2010/12/14'
         },
         {
           user_info_id: 41,
@@ -462,10 +462,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Thornton Levine',
-          role: 'reception',
+          role: 'admin',
           status: 'deactivated',
-          date_created: '5/30/2011',
-          date_updated: '5/30/2011'
+          date_created: '2012/06/28',
+          date_updated: '2012/06/28'
         },
         {
           user_info_id: 42,
@@ -473,10 +473,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Barnett Bird',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '2/18/2012',
-          date_updated: '2/18/2012'
+          role: 'client',
+          status: 'temporary',
+          date_created: '2014/08/09',
+          date_updated: '2014/08/09'
         },
         {
           user_info_id: 43,
@@ -484,10 +484,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Brooke Vasquez',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '1/8/2013',
-          date_updated: '1/8/2013'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2014/01/10',
+          date_updated: '2014/01/10'
         },
         {
           user_info_id: 44,
@@ -495,10 +495,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Munoz Berger',
-          role: 'admin',
-          status: 'active',
-          date_created: '7/5/2016',
-          date_updated: '7/5/2016'
+          role: 'client',
+          status: 'temporary',
+          date_created: '2014/12/29',
+          date_updated: '2014/12/29'
         },
         {
           user_info_id: 45,
@@ -506,10 +506,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Whitaker Bruce',
-          role: 'client',
-          status: 'disabled',
-          date_created: '5/1/2015',
-          date_updated: '5/1/2015'
+          role: 'reception',
+          status: 'deactivated',
+          date_created: '2010/07/21',
+          date_updated: '2010/07/21'
         },
         {
           user_info_id: 46,
@@ -518,9 +518,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lilia Combs',
           role: 'client',
-          status: 'deactivated',
-          date_created: '7/31/2016',
-          date_updated: '7/31/2016'
+          status: 'softlocked',
+          date_created: '2016/05/21',
+          date_updated: '2016/05/21'
         },
         {
           user_info_id: 47,
@@ -530,8 +530,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Baker May',
           role: 'client',
           status: 'active',
-          date_created: '4/10/2010',
-          date_updated: '4/10/2010'
+          date_created: '2014/12/04',
+          date_updated: '2014/12/04'
         },
         {
           user_info_id: 48,
@@ -539,10 +539,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Elnora Daniel',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '5/30/2017',
-          date_updated: '5/30/2017'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2012/08/19',
+          date_updated: '2012/08/19'
         },
         {
           user_info_id: 49,
@@ -550,10 +550,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Allyson Delgado',
-          role: 'therapist',
-          status: 'disabled',
-          date_created: '1/30/2012',
-          date_updated: '1/30/2012'
+          role: 'admin',
+          status: 'active',
+          date_created: '2012/05/31',
+          date_updated: '2012/05/31'
         },
         {
           user_info_id: 50,
@@ -562,9 +562,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Nadine Munoz',
           role: 'admin',
-          status: 'hardlocked',
-          date_created: '7/21/2013',
-          date_updated: '7/21/2013'
+          status: 'temporary',
+          date_created: '2013/12/12',
+          date_updated: '2013/12/12'
         },
         {
           user_info_id: 51,
@@ -573,9 +573,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Candice Tillman',
           role: 'client',
-          status: 'active',
-          date_created: '11/20/2017',
-          date_updated: '11/20/2017'
+          status: 'disabled',
+          date_created: '2017/11/11',
+          date_updated: '2017/11/11'
         },
         {
           user_info_id: 52,
@@ -584,9 +584,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lorene Richard',
           role: 'reception',
-          status: 'temporary',
-          date_created: '3/7/2014',
-          date_updated: '3/7/2014'
+          status: 'deactivated',
+          date_created: '2010/10/31',
+          date_updated: '2010/10/31'
         },
         {
           user_info_id: 53,
@@ -594,10 +594,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Elba Kennedy',
-          role: 'admin',
-          status: 'disabled',
-          date_created: '9/13/2011',
-          date_updated: '9/13/2011'
+          role: 'therapist',
+          status: 'deactivated',
+          date_created: '2017/03/04',
+          date_updated: '2017/03/04'
         },
         {
           user_info_id: 54,
@@ -605,10 +605,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Patrica Bean',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '10/26/2016',
-          date_updated: '10/26/2016'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2013/08/21',
+          date_updated: '2013/08/21'
         },
         {
           user_info_id: 55,
@@ -616,10 +616,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Aguilar Chang',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '5/11/2014',
-          date_updated: '5/11/2014'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2014/05/23',
+          date_updated: '2014/05/23'
         },
         {
           user_info_id: 56,
@@ -627,10 +627,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Macdonald Cochran',
-          role: 'reception',
-          status: 'softlocked',
-          date_created: '6/7/2016',
-          date_updated: '6/7/2016'
+          role: 'client',
+          status: 'temporary',
+          date_created: '2012/10/09',
+          date_updated: '2012/10/09'
         },
         {
           user_info_id: 57,
@@ -638,10 +638,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Tasha Davis',
-          role: 'therapist',
-          status: 'temporary',
-          date_created: '2/15/2014',
-          date_updated: '2/15/2014'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2016/07/17',
+          date_updated: '2016/07/17'
         },
         {
           user_info_id: 58,
@@ -649,10 +649,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Kane Reid',
-          role: 'reception',
-          status: 'hardlocked',
-          date_created: '3/31/2014',
-          date_updated: '3/31/2014'
+          role: 'admin',
+          status: 'disabled',
+          date_created: '2010/03/12',
+          date_updated: '2010/03/12'
         },
         {
           user_info_id: 59,
@@ -660,10 +660,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Victoria Duke',
-          role: 'admin',
-          status: 'softlocked',
-          date_created: '11/26/2017',
-          date_updated: '11/26/2017'
+          role: 'client',
+          status: 'active',
+          date_created: '2010/02/04',
+          date_updated: '2010/02/04'
         },
         {
           user_info_id: 60,
@@ -671,10 +671,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Casey Gibson',
-          role: 'client',
-          status: 'hardlocked',
-          date_created: '9/28/2015',
-          date_updated: '9/28/2015'
+          role: 'reception',
+          status: 'disabled',
+          date_created: '2012/11/15',
+          date_updated: '2012/11/15'
         },
         {
           user_info_id: 61,
@@ -682,10 +682,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Jimenez Watkins',
-          role: 'admin',
-          status: 'hardlocked',
-          date_created: '6/25/2012',
-          date_updated: '6/25/2012'
+          role: 'client',
+          status: 'softlocked',
+          date_created: '2011/07/20',
+          date_updated: '2011/07/20'
         },
         {
           user_info_id: 62,
@@ -693,10 +693,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Barker Velasquez',
-          role: 'admin',
-          status: 'softlocked',
-          date_created: '12/25/2013',
-          date_updated: '12/25/2013'
+          role: 'reception',
+          status: 'active',
+          date_created: '2010/04/03',
+          date_updated: '2010/04/03'
         },
         {
           user_info_id: 63,
@@ -704,10 +704,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mayra Trujillo',
-          role: 'therapist',
-          status: 'disabled',
-          date_created: '3/30/2014',
-          date_updated: '3/30/2014'
+          role: 'client',
+          status: 'active',
+          date_created: '2013/02/24',
+          date_updated: '2013/02/24'
         },
         {
           user_info_id: 64,
@@ -716,9 +716,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Robles Murphy',
           role: 'admin',
-          status: 'active',
-          date_created: '3/17/2017',
-          date_updated: '3/17/2017'
+          status: 'hardlocked',
+          date_created: '2010/06/13',
+          date_updated: '2010/06/13'
         },
         {
           user_info_id: 65,
@@ -727,9 +727,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Haley Elliott',
           role: 'client',
-          status: 'deactivated',
-          date_created: '8/20/2015',
-          date_updated: '8/20/2015'
+          status: 'softlocked',
+          date_created: '2010/05/01',
+          date_updated: '2010/05/01'
         },
         {
           user_info_id: 66,
@@ -738,9 +738,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lillie Alvarado',
           role: 'client',
-          status: 'disabled',
-          date_created: '11/23/2011',
-          date_updated: '11/23/2011'
+          status: 'deactivated',
+          date_created: '2011/11/03',
+          date_updated: '2011/11/03'
         },
         {
           user_info_id: 67,
@@ -749,9 +749,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Cristina Castillo',
           role: 'client',
-          status: 'temporary',
-          date_created: '3/15/2015',
-          date_updated: '3/15/2015'
+          status: 'disabled',
+          date_created: '2011/12/29',
+          date_updated: '2011/12/29'
         },
         {
           user_info_id: 68,
@@ -759,10 +759,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Neva Stanley',
-          role: 'therapist',
+          role: 'client',
           status: 'softlocked',
-          date_created: '8/1/2017',
-          date_updated: '8/1/2017'
+          date_created: '2012/09/26',
+          date_updated: '2012/09/26'
         },
         {
           user_info_id: 69,
@@ -770,10 +770,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Annie Rosario',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '1/16/2015',
-          date_updated: '1/16/2015'
+          role: 'reception',
+          status: 'active',
+          date_created: '2011/04/12',
+          date_updated: '2011/04/12'
         },
         {
           user_info_id: 70,
@@ -781,10 +781,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Ewing Humphrey',
-          role: 'reception',
-          status: 'temporary',
-          date_created: '6/28/2015',
-          date_updated: '6/28/2015'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2017/12/05',
+          date_updated: '2017/12/05'
         },
         {
           user_info_id: 71,
@@ -792,10 +792,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Iva Mueller',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '7/16/2016',
-          date_updated: '7/16/2016'
+          role: 'reception',
+          status: 'disabled',
+          date_created: '2013/01/24',
+          date_updated: '2013/01/24'
         },
         {
           user_info_id: 72,
@@ -803,10 +803,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Kemp Bryant',
-          role: 'reception',
-          status: 'disabled',
-          date_created: '10/21/2014',
-          date_updated: '10/21/2014'
+          role: 'therapist',
+          status: 'active',
+          date_created: '2016/01/08',
+          date_updated: '2016/01/08'
         },
         {
           user_info_id: 73,
@@ -814,10 +814,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Pauline Emerson',
-          role: 'therapist',
-          status: 'hardlocked',
-          date_created: '2/26/2012',
-          date_updated: '2/26/2012'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2014/02/07',
+          date_updated: '2014/02/07'
         },
         {
           user_info_id: 74,
@@ -825,10 +825,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Delores Kaufman',
-          role: 'reception',
-          status: 'disabled',
-          date_created: '7/7/2017',
-          date_updated: '7/7/2017'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2011/10/15',
+          date_updated: '2011/10/15'
         },
         {
           user_info_id: 75,
@@ -836,10 +836,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Hahn Bernard',
-          role: 'therapist',
-          status: 'softlocked',
-          date_created: '9/22/2010',
-          date_updated: '9/22/2010'
+          role: 'admin',
+          status: 'disabled',
+          date_created: '2015/02/07',
+          date_updated: '2015/02/07'
         },
         {
           user_info_id: 76,
@@ -849,8 +849,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Duffy Gregory',
           role: 'therapist',
           status: 'deactivated',
-          date_created: '3/22/2014',
-          date_updated: '3/22/2014'
+          date_created: '2015/04/03',
+          date_updated: '2015/04/03'
         },
         {
           user_info_id: 77,
@@ -859,9 +859,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Strickland Odom',
           role: 'admin',
-          status: 'temporary',
-          date_created: '9/6/2013',
-          date_updated: '9/6/2013'
+          status: 'active',
+          date_created: '2011/10/30',
+          date_updated: '2011/10/30'
         },
         {
           user_info_id: 78,
@@ -869,10 +869,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Patty Cruz',
-          role: 'reception',
-          status: 'softlocked',
-          date_created: '8/21/2012',
-          date_updated: '8/21/2012'
+          role: 'client',
+          status: 'temporary',
+          date_created: '2013/04/29',
+          date_updated: '2013/04/29'
         },
         {
           user_info_id: 79,
@@ -881,9 +881,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Dillon Witt',
           role: 'therapist',
-          status: 'active',
-          date_created: '9/29/2013',
-          date_updated: '9/29/2013'
+          status: 'softlocked',
+          date_created: '2015/12/26',
+          date_updated: '2015/12/26'
         },
         {
           user_info_id: 80,
@@ -891,10 +891,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gay Mccarty',
-          role: 'admin',
-          status: 'disabled',
-          date_created: '3/20/2011',
-          date_updated: '3/20/2011'
+          role: 'reception',
+          status: 'deactivated',
+          date_created: '2010/01/10',
+          date_updated: '2010/01/10'
         },
         {
           user_info_id: 81,
@@ -902,10 +902,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Rice Klein',
-          role: 'therapist',
+          role: 'admin',
           status: 'deactivated',
-          date_created: '5/6/2014',
-          date_updated: '5/6/2014'
+          date_created: '2012/07/03',
+          date_updated: '2012/07/03'
         },
         {
           user_info_id: 82,
@@ -913,10 +913,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Bridgette Decker',
-          role: 'reception',
-          status: 'softlocked',
-          date_created: '5/6/2016',
-          date_updated: '5/6/2016'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2010/12/17',
+          date_updated: '2010/12/17'
         },
         {
           user_info_id: 83,
@@ -925,9 +925,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Greta Hickman',
           role: 'client',
-          status: 'active',
-          date_created: '1/5/2017',
-          date_updated: '1/5/2017'
+          status: 'softlocked',
+          date_created: '2016/09/18',
+          date_updated: '2016/09/18'
         },
         {
           user_info_id: 84,
@@ -935,10 +935,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Wilkinson Everett',
-          role: 'admin',
-          status: 'softlocked',
-          date_created: '4/30/2014',
-          date_updated: '4/30/2014'
+          role: 'reception',
+          status: 'deactivated',
+          date_created: '2017/04/03',
+          date_updated: '2017/04/03'
         },
         {
           user_info_id: 85,
@@ -946,10 +946,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Briggs Daniels',
-          role: 'reception',
+          role: 'admin',
           status: 'softlocked',
-          date_created: '6/12/2010',
-          date_updated: '6/12/2010'
+          date_created: '2014/10/11',
+          date_updated: '2014/10/11'
         },
         {
           user_info_id: 86,
@@ -957,10 +957,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Savannah Joseph',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '2/5/2010',
-          date_updated: '2/5/2010'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2017/12/08',
+          date_updated: '2017/12/08'
         },
         {
           user_info_id: 87,
@@ -968,10 +968,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mccullough Pate',
-          role: 'reception',
-          status: 'softlocked',
-          date_created: '6/21/2010',
-          date_updated: '6/21/2010'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2016/01/02',
+          date_updated: '2016/01/02'
         },
         {
           user_info_id: 88,
@@ -980,9 +980,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Bridges Ford',
           role: 'admin',
-          status: 'temporary',
-          date_created: '5/28/2014',
-          date_updated: '5/28/2014'
+          status: 'active',
+          date_created: '2013/08/16',
+          date_updated: '2013/08/16'
         },
         {
           user_info_id: 89,
@@ -990,10 +990,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Edwards Cantrell',
-          role: 'therapist',
-          status: 'active',
-          date_created: '4/19/2012',
-          date_updated: '4/19/2012'
+          role: 'reception',
+          status: 'softlocked',
+          date_created: '2015/10/21',
+          date_updated: '2015/10/21'
         },
         {
           user_info_id: 90,
@@ -1003,8 +1003,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Marion Meyers',
           role: 'therapist',
           status: 'disabled',
-          date_created: '2/14/2014',
-          date_updated: '2/14/2014'
+          date_created: '2012/04/20',
+          date_updated: '2012/04/20'
         },
         {
           user_info_id: 91,
@@ -1012,10 +1012,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Christine Cleveland',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '3/28/2016',
-          date_updated: '3/28/2016'
+          role: 'admin',
+          status: 'active',
+          date_created: '2014/12/02',
+          date_updated: '2014/12/02'
         },
         {
           user_info_id: 92,
@@ -1024,9 +1024,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sosa Koch',
           role: 'therapist',
-          status: 'disabled',
-          date_created: '12/28/2016',
-          date_updated: '12/28/2016'
+          status: 'hardlocked',
+          date_created: '2015/08/09',
+          date_updated: '2015/08/09'
         },
         {
           user_info_id: 93,
@@ -1035,9 +1035,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Silva Navarro',
           role: 'therapist',
-          status: 'softlocked',
-          date_created: '12/4/2013',
-          date_updated: '12/4/2013'
+          status: 'deactivated',
+          date_created: '2017/05/13',
+          date_updated: '2017/05/13'
         },
         {
           user_info_id: 94,
@@ -1045,10 +1045,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Parker Velez',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '10/10/2011',
-          date_updated: '10/10/2011'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2014/02/27',
+          date_updated: '2014/02/27'
         },
         {
           user_info_id: 95,
@@ -1056,10 +1056,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Augusta Edwards',
-          role: 'client',
-          status: 'disabled',
-          date_created: '11/21/2013',
-          date_updated: '11/21/2013'
+          role: 'therapist',
+          status: 'active',
+          date_created: '2014/05/04',
+          date_updated: '2014/05/04'
         },
         {
           user_info_id: 96,
@@ -1068,9 +1068,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Hale Alexander',
           role: 'therapist',
-          status: 'hardlocked',
-          date_created: '8/17/2017',
-          date_updated: '8/17/2017'
+          status: 'softlocked',
+          date_created: '2010/02/09',
+          date_updated: '2010/02/09'
         },
         {
           user_info_id: 97,
@@ -1078,10 +1078,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Staci Jimenez',
-          role: 'reception',
+          role: 'admin',
           status: 'deactivated',
-          date_created: '6/7/2012',
-          date_updated: '6/7/2012'
+          date_created: '2011/01/13',
+          date_updated: '2011/01/13'
         },
         {
           user_info_id: 98,
@@ -1089,10 +1089,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Watson Miles',
-          role: 'client',
+          role: 'therapist',
           status: 'hardlocked',
-          date_created: '4/9/2012',
-          date_updated: '4/9/2012'
+          date_created: '2011/02/07',
+          date_updated: '2011/02/07'
         },
         {
           user_info_id: 99,
@@ -1100,10 +1100,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Kathrine Morse',
-          role: 'client',
-          status: 'active',
-          date_created: '4/24/2012',
-          date_updated: '4/24/2012'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2016/02/16',
+          date_updated: '2016/02/16'
         },
         {
           user_info_id: 100,
@@ -1111,10 +1111,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lourdes Riggs',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '10/23/2012',
-          date_updated: '10/23/2012'
+          role: 'client',
+          status: 'active',
+          date_created: '2010/01/30',
+          date_updated: '2010/01/30'
         },
         {
           user_info_id: 101,
@@ -1122,10 +1122,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Jasmine Pittman',
-          role: 'therapist',
+          role: 'client',
           status: 'hardlocked',
-          date_created: '9/19/2013',
-          date_updated: '9/19/2013'
+          date_created: '2014/05/29',
+          date_updated: '2014/05/29'
         },
         {
           user_info_id: 102,
@@ -1133,10 +1133,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Nicholson Richards',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '7/24/2015',
-          date_updated: '7/24/2015'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2013/06/23',
+          date_updated: '2013/06/23'
         },
         {
           user_info_id: 103,
@@ -1144,10 +1144,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Annmarie Mejia',
-          role: 'admin',
-          status: 'disabled',
-          date_created: '7/28/2016',
-          date_updated: '7/28/2016'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2015/08/21',
+          date_updated: '2015/08/21'
         },
         {
           user_info_id: 104,
@@ -1155,10 +1155,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Goodman Zamora',
-          role: 'therapist',
-          status: 'softlocked',
-          date_created: '12/17/2010',
-          date_updated: '12/17/2010'
+          role: 'client',
+          status: 'disabled',
+          date_created: '2010/08/24',
+          date_updated: '2010/08/24'
         },
         {
           user_info_id: 105,
@@ -1166,10 +1166,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Young Peterson',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '4/15/2015',
-          date_updated: '4/15/2015'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2017/02/24',
+          date_updated: '2017/02/24'
         },
         {
           user_info_id: 106,
@@ -1177,10 +1177,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Stafford Torres',
-          role: 'therapist',
+          role: 'reception',
           status: 'active',
-          date_created: '10/30/2011',
-          date_updated: '10/30/2011'
+          date_created: '2010/02/08',
+          date_updated: '2010/02/08'
         },
         {
           user_info_id: 107,
@@ -1189,9 +1189,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Curry Little',
           role: 'reception',
-          status: 'disabled',
-          date_created: '4/9/2013',
-          date_updated: '4/9/2013'
+          status: 'active',
+          date_created: '2014/07/18',
+          date_updated: '2014/07/18'
         },
         {
           user_info_id: 108,
@@ -1200,9 +1200,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Alicia Levy',
           role: 'admin',
-          status: 'temporary',
-          date_created: '7/24/2014',
-          date_updated: '7/24/2014'
+          status: 'disabled',
+          date_created: '2017/05/31',
+          date_updated: '2017/05/31'
         },
         {
           user_info_id: 109,
@@ -1211,9 +1211,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Jacquelyn Moran',
           role: 'client',
-          status: 'deactivated',
-          date_created: '5/11/2017',
-          date_updated: '5/11/2017'
+          status: 'hardlocked',
+          date_created: '2013/03/10',
+          date_updated: '2013/03/10'
         },
         {
           user_info_id: 110,
@@ -1221,10 +1221,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Charlene Turner',
-          role: 'client',
+          role: 'reception',
           status: 'active',
-          date_created: '3/25/2013',
-          date_updated: '3/25/2013'
+          date_created: '2013/04/27',
+          date_updated: '2013/04/27'
         },
         {
           user_info_id: 111,
@@ -1232,10 +1232,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gretchen Holmes',
-          role: 'client',
-          status: 'hardlocked',
-          date_created: '3/13/2016',
-          date_updated: '3/13/2016'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2014/09/11',
+          date_updated: '2014/09/11'
         },
         {
           user_info_id: 112,
@@ -1243,10 +1243,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mabel Douglas',
-          role: 'admin',
-          status: 'active',
-          date_created: '8/29/2010',
-          date_updated: '8/29/2010'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2010/10/01',
+          date_updated: '2010/10/01'
         },
         {
           user_info_id: 113,
@@ -1255,9 +1255,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Selena Pugh',
           role: 'therapist',
-          status: 'active',
-          date_created: '11/18/2011',
-          date_updated: '11/18/2011'
+          status: 'hardlocked',
+          date_created: '2013/09/26',
+          date_updated: '2013/09/26'
         },
         {
           user_info_id: 114,
@@ -1266,9 +1266,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Roman Jenkins',
           role: 'therapist',
-          status: 'disabled',
-          date_created: '9/30/2013',
-          date_updated: '9/30/2013'
+          status: 'hardlocked',
+          date_created: '2011/11/11',
+          date_updated: '2011/11/11'
         },
         {
           user_info_id: 115,
@@ -1276,10 +1276,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Thelma Ochoa',
-          role: 'reception',
-          status: 'hardlocked',
-          date_created: '12/13/2013',
-          date_updated: '12/13/2013'
+          role: 'client',
+          status: 'deactivated',
+          date_created: '2017/09/05',
+          date_updated: '2017/09/05'
         },
         {
           user_info_id: 116,
@@ -1287,10 +1287,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Georgia Livingston',
-          role: 'therapist',
-          status: 'disabled',
-          date_created: '8/19/2014',
-          date_updated: '8/19/2014'
+          role: 'reception',
+          status: 'softlocked',
+          date_created: '2014/05/03',
+          date_updated: '2014/05/03'
         },
         {
           user_info_id: 117,
@@ -1299,9 +1299,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Montgomery Gross',
           role: 'reception',
-          status: 'disabled',
-          date_created: '12/23/2012',
-          date_updated: '12/23/2012'
+          status: 'active',
+          date_created: '2010/10/30',
+          date_updated: '2010/10/30'
         },
         {
           user_info_id: 118,
@@ -1309,10 +1309,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Madden Dawson',
-          role: 'admin',
-          status: 'hardlocked',
-          date_created: '6/4/2015',
-          date_updated: '6/4/2015'
+          role: 'client',
+          status: 'disabled',
+          date_created: '2012/01/02',
+          date_updated: '2012/01/02'
         },
         {
           user_info_id: 119,
@@ -1320,10 +1320,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Shawna Henry',
-          role: 'reception',
-          status: 'active',
-          date_created: '8/4/2011',
-          date_updated: '8/4/2011'
+          role: 'client',
+          status: 'deactivated',
+          date_created: '2010/04/13',
+          date_updated: '2010/04/13'
         },
         {
           user_info_id: 120,
@@ -1331,10 +1331,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Marks Poole',
-          role: 'therapist',
-          status: 'temporary',
-          date_created: '6/14/2016',
-          date_updated: '6/14/2016'
+          role: 'admin',
+          status: 'deactivated',
+          date_created: '2011/02/12',
+          date_updated: '2011/02/12'
         },
         {
           user_info_id: 121,
@@ -1342,10 +1342,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gayle Newman',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '11/4/2016',
-          date_updated: '11/4/2016'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2016/09/12',
+          date_updated: '2016/09/12'
         },
         {
           user_info_id: 122,
@@ -1353,10 +1353,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Buckley Mendoza',
-          role: 'client',
-          status: 'disabled',
-          date_created: '9/29/2011',
-          date_updated: '9/29/2011'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2017/09/24',
+          date_updated: '2017/09/24'
         },
         {
           user_info_id: 123,
@@ -1365,9 +1365,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Dickson Bishop',
           role: 'therapist',
-          status: 'active',
-          date_created: '2/24/2012',
-          date_updated: '2/24/2012'
+          status: 'temporary',
+          date_created: '2013/03/20',
+          date_updated: '2013/03/20'
         },
         {
           user_info_id: 124,
@@ -1375,10 +1375,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Ray Kemp',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '4/21/2017',
-          date_updated: '4/21/2017'
+          role: 'therapist',
+          status: 'deactivated',
+          date_created: '2011/11/11',
+          date_updated: '2011/11/11'
         },
         {
           user_info_id: 125,
@@ -1386,10 +1386,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Booth Willis',
-          role: 'admin',
+          role: 'client',
           status: 'active',
-          date_created: '11/5/2016',
-          date_updated: '11/5/2016'
+          date_created: '2012/02/05',
+          date_updated: '2012/02/05'
         },
         {
           user_info_id: 126,
@@ -1397,10 +1397,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Joni Gould',
-          role: 'therapist',
-          status: 'softlocked',
-          date_created: '8/28/2016',
-          date_updated: '8/28/2016'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2016/02/12',
+          date_updated: '2016/02/12'
         },
         {
           user_info_id: 127,
@@ -1408,10 +1408,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Donna Riley',
-          role: 'client',
+          role: 'admin',
           status: 'temporary',
-          date_created: '7/3/2017',
-          date_updated: '7/3/2017'
+          date_created: '2017/09/13',
+          date_updated: '2017/09/13'
         },
         {
           user_info_id: 128,
@@ -1419,10 +1419,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Caldwell Hogan',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '12/18/2016',
-          date_updated: '12/18/2016'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2011/11/27',
+          date_updated: '2011/11/27'
         },
         {
           user_info_id: 129,
@@ -1430,10 +1430,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Potter Hurley',
-          role: 'reception',
-          status: 'hardlocked',
-          date_created: '9/21/2011',
-          date_updated: '9/21/2011'
+          role: 'admin',
+          status: 'softlocked',
+          date_created: '2016/07/30',
+          date_updated: '2016/07/30'
         },
         {
           user_info_id: 130,
@@ -1441,10 +1441,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Evelyn Simmons',
-          role: 'admin',
+          role: 'reception',
           status: 'hardlocked',
-          date_created: '2/28/2010',
-          date_updated: '2/28/2010'
+          date_created: '2012/03/09',
+          date_updated: '2012/03/09'
         },
         {
           user_info_id: 131,
@@ -1453,9 +1453,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Ladonna Nolan',
           role: 'client',
-          status: 'temporary',
-          date_created: '9/4/2013',
-          date_updated: '9/4/2013'
+          status: 'disabled',
+          date_created: '2017/02/27',
+          date_updated: '2017/02/27'
         },
         {
           user_info_id: 132,
@@ -1465,8 +1465,8 @@ exports.seed = function(knex, Promise) {
           display_name: 'Gilbert Brock',
           role: 'admin',
           status: 'hardlocked',
-          date_created: '12/24/2012',
-          date_updated: '12/24/2012'
+          date_created: '2014/11/07',
+          date_updated: '2014/11/07'
         },
         {
           user_info_id: 133,
@@ -1474,10 +1474,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gibbs Dunlap',
-          role: 'therapist',
+          role: 'admin',
           status: 'hardlocked',
-          date_created: '4/28/2015',
-          date_updated: '4/28/2015'
+          date_created: '2015/10/26',
+          date_updated: '2015/10/26'
         },
         {
           user_info_id: 134,
@@ -1485,10 +1485,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Watkins Blanchard',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '4/26/2012',
-          date_updated: '4/26/2012'
+          role: 'admin',
+          status: 'softlocked',
+          date_created: '2013/08/17',
+          date_updated: '2013/08/17'
         },
         {
           user_info_id: 135,
@@ -1496,10 +1496,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mamie Rush',
-          role: 'client',
-          status: 'active',
-          date_created: '2/18/2014',
-          date_updated: '2/18/2014'
+          role: 'reception',
+          status: 'disabled',
+          date_created: '2014/10/13',
+          date_updated: '2014/10/13'
         },
         {
           user_info_id: 136,
@@ -1507,10 +1507,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Adela Mckee',
-          role: 'client',
-          status: 'disabled',
-          date_created: '8/21/2014',
-          date_updated: '8/21/2014'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2012/09/26',
+          date_updated: '2012/09/26'
         },
         {
           user_info_id: 137,
@@ -1518,10 +1518,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Carissa Riddle',
-          role: 'admin',
-          status: 'softlocked',
-          date_created: '7/25/2012',
-          date_updated: '7/25/2012'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2017/12/02',
+          date_updated: '2017/12/02'
         },
         {
           user_info_id: 138,
@@ -1529,10 +1529,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Marta Reynolds',
-          role: 'client',
-          status: 'active',
-          date_created: '5/17/2010',
-          date_updated: '5/17/2010'
+          role: 'therapist',
+          status: 'deactivated',
+          date_created: '2012/12/02',
+          date_updated: '2012/12/02'
         },
         {
           user_info_id: 139,
@@ -1540,10 +1540,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Copeland Hurst',
-          role: 'admin',
+          role: 'reception',
           status: 'hardlocked',
-          date_created: '5/5/2017',
-          date_updated: '5/5/2017'
+          date_created: '2013/10/01',
+          date_updated: '2013/10/01'
         },
         {
           user_info_id: 140,
@@ -1551,10 +1551,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Julianne Larson',
-          role: 'therapist',
+          role: 'admin',
           status: 'hardlocked',
-          date_created: '7/25/2013',
-          date_updated: '7/25/2013'
+          date_created: '2015/06/20',
+          date_updated: '2015/06/20'
         },
         {
           user_info_id: 141,
@@ -1562,10 +1562,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sharlene Parsons',
-          role: 'client',
-          status: 'deactivated',
-          date_created: '7/11/2013',
-          date_updated: '7/11/2013'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2011/12/12',
+          date_updated: '2011/12/12'
         },
         {
           user_info_id: 142,
@@ -1573,10 +1573,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Billie Fowler',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '11/25/2016',
-          date_updated: '11/25/2016'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2011/05/07',
+          date_updated: '2011/05/07'
         },
         {
           user_info_id: 143,
@@ -1584,10 +1584,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sheila Hubbard',
-          role: 'client',
-          status: 'temporary',
-          date_created: '10/24/2012',
-          date_updated: '10/24/2012'
+          role: 'therapist',
+          status: 'softlocked',
+          date_created: '2015/02/15',
+          date_updated: '2015/02/15'
         },
         {
           user_info_id: 144,
@@ -1595,10 +1595,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Noelle Bowman',
-          role: 'client',
-          status: 'temporary',
-          date_created: '6/12/2014',
-          date_updated: '6/12/2014'
+          role: 'reception',
+          status: 'disabled',
+          date_created: '2012/11/20',
+          date_updated: '2012/11/20'
         },
         {
           user_info_id: 145,
@@ -1606,10 +1606,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Elsie Stephenson',
-          role: 'client',
-          status: 'softlocked',
-          date_created: '9/11/2013',
-          date_updated: '9/11/2013'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2013/05/19',
+          date_updated: '2013/05/19'
         },
         {
           user_info_id: 146,
@@ -1617,10 +1617,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Whitney Grimes',
-          role: 'reception',
-          status: 'disabled',
-          date_created: '9/21/2015',
-          date_updated: '9/21/2015'
+          role: 'therapist',
+          status: 'hardlocked',
+          date_created: '2010/11/22',
+          date_updated: '2010/11/22'
         },
         {
           user_info_id: 147,
@@ -1628,10 +1628,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Madeleine Welch',
-          role: 'reception',
+          role: 'admin',
           status: 'hardlocked',
-          date_created: '3/2/2012',
-          date_updated: '3/2/2012'
+          date_created: '2017/02/09',
+          date_updated: '2017/02/09'
         },
         {
           user_info_id: 148,
@@ -1639,10 +1639,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Cathryn Puckett',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '3/23/2016',
-          date_updated: '3/23/2016'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2012/02/26',
+          date_updated: '2012/02/26'
         },
         {
           user_info_id: 149,
@@ -1650,10 +1650,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Ortiz Todd',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '9/2/2010',
-          date_updated: '9/2/2010'
+          role: 'therapist',
+          status: 'disabled',
+          date_created: '2016/03/07',
+          date_updated: '2016/03/07'
         },
         {
           user_info_id: 150,
@@ -1662,9 +1662,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Manuela Harvey',
           role: 'admin',
-          status: 'temporary',
-          date_created: '11/24/2015',
-          date_updated: '11/24/2015'
+          status: 'disabled',
+          date_created: '2016/02/21',
+          date_updated: '2016/02/21'
         },
         {
           user_info_id: 151,
@@ -1672,10 +1672,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gates Morrison',
-          role: 'client',
-          status: 'disabled',
-          date_created: '1/6/2015',
-          date_updated: '1/6/2015'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2017/03/26',
+          date_updated: '2017/03/26'
         },
         {
           user_info_id: 152,
@@ -1683,10 +1683,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Bennett Henson',
-          role: 'admin',
-          status: 'deactivated',
-          date_created: '12/5/2016',
-          date_updated: '12/5/2016'
+          role: 'client',
+          status: 'softlocked',
+          date_created: '2016/03/24',
+          date_updated: '2016/03/24'
         },
         {
           user_info_id: 153,
@@ -1694,10 +1694,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Wagner Fox',
-          role: 'therapist',
-          status: 'hardlocked',
-          date_created: '9/26/2015',
-          date_updated: '9/26/2015'
+          role: 'reception',
+          status: 'softlocked',
+          date_created: '2016/05/23',
+          date_updated: '2016/05/23'
         },
         {
           user_info_id: 154,
@@ -1705,10 +1705,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Aguirre Lynn',
-          role: 'admin',
+          role: 'reception',
           status: 'temporary',
-          date_created: '12/19/2013',
-          date_updated: '12/19/2013'
+          date_created: '2017/10/30',
+          date_updated: '2017/10/30'
         },
         {
           user_info_id: 155,
@@ -1716,10 +1716,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Madeline Mckinney',
-          role: 'admin',
-          status: 'active',
-          date_created: '10/6/2013',
-          date_updated: '10/6/2013'
+          role: 'client',
+          status: 'disabled',
+          date_created: '2016/07/11',
+          date_updated: '2016/07/11'
         },
         {
           user_info_id: 156,
@@ -1727,10 +1727,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Katy Gardner',
-          role: 'client',
-          status: 'disabled',
-          date_created: '6/10/2012',
-          date_updated: '6/10/2012'
+          role: 'therapist',
+          status: 'active',
+          date_created: '2016/05/13',
+          date_updated: '2016/05/13'
         },
         {
           user_info_id: 157,
@@ -1738,10 +1738,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lyons Foster',
-          role: 'reception',
-          status: 'deactivated',
-          date_created: '4/17/2011',
-          date_updated: '4/17/2011'
+          role: 'client',
+          status: 'disabled',
+          date_created: '2014/03/19',
+          date_updated: '2014/03/19'
         },
         {
           user_info_id: 158,
@@ -1750,9 +1750,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Justice Merrill',
           role: 'therapist',
-          status: 'hardlocked',
-          date_created: '10/15/2012',
-          date_updated: '10/15/2012'
+          status: 'disabled',
+          date_created: '2017/04/22',
+          date_updated: '2017/04/22'
         },
         {
           user_info_id: 159,
@@ -1760,10 +1760,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Evangelina Gonzalez',
-          role: 'admin',
+          role: 'reception',
           status: 'hardlocked',
-          date_created: '5/12/2014',
-          date_updated: '5/12/2014'
+          date_created: '2017/09/26',
+          date_updated: '2017/09/26'
         },
         {
           user_info_id: 160,
@@ -1771,10 +1771,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Melissa Spears',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '3/22/2017',
-          date_updated: '3/22/2017'
+          role: 'client',
+          status: 'hardlocked',
+          date_created: '2017/11/30',
+          date_updated: '2017/11/30'
         },
         {
           user_info_id: 161,
@@ -1782,10 +1782,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Hatfield Robertson',
-          role: 'reception',
-          status: 'hardlocked',
-          date_created: '9/14/2012',
-          date_updated: '9/14/2012'
+          role: 'admin',
+          status: 'softlocked',
+          date_created: '2014/06/20',
+          date_updated: '2014/06/20'
         },
         {
           user_info_id: 162,
@@ -1793,10 +1793,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Jan Byers',
-          role: 'therapist',
-          status: 'disabled',
-          date_created: '12/8/2016',
-          date_updated: '12/8/2016'
+          role: 'client',
+          status: 'deactivated',
+          date_created: '2017/06/01',
+          date_updated: '2017/06/01'
         },
         {
           user_info_id: 163,
@@ -1804,10 +1804,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Essie Suarez',
-          role: 'admin',
-          status: 'temporary',
-          date_created: '12/26/2011',
-          date_updated: '12/26/2011'
+          role: 'reception',
+          status: 'hardlocked',
+          date_created: '2010/03/09',
+          date_updated: '2010/03/09'
         },
         {
           user_info_id: 164,
@@ -1816,9 +1816,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Collins Goff',
           role: 'client',
-          status: 'temporary',
-          date_created: '7/26/2015',
-          date_updated: '7/26/2015'
+          status: 'deactivated',
+          date_created: '2017/02/02',
+          date_updated: '2017/02/02'
         },
         {
           user_info_id: 165,
@@ -1827,9 +1827,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Gordon Noel',
           role: 'client',
-          status: 'active',
-          date_created: '7/30/2016',
-          date_updated: '7/30/2016'
+          status: 'disabled',
+          date_created: '2013/07/27',
+          date_updated: '2013/07/27'
         },
         {
           user_info_id: 166,
@@ -1837,10 +1837,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Barry Vinson',
-          role: 'client',
-          status: 'hardlocked',
-          date_created: '2/27/2017',
-          date_updated: '2/27/2017'
+          role: 'reception',
+          status: 'temporary',
+          date_created: '2012/06/22',
+          date_updated: '2012/06/22'
         },
         {
           user_info_id: 167,
@@ -1848,10 +1848,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sullivan Finley',
-          role: 'therapist',
-          status: 'active',
-          date_created: '10/16/2013',
-          date_updated: '10/16/2013'
+          role: 'admin',
+          status: 'deactivated',
+          date_created: '2012/10/13',
+          date_updated: '2012/10/13'
         },
         {
           user_info_id: 168,
@@ -1859,10 +1859,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Mcleod Mccormick',
-          role: 'client',
-          status: 'disabled',
-          date_created: '12/6/2015',
-          date_updated: '12/6/2015'
+          role: 'therapist',
+          status: 'active',
+          date_created: '2013/02/07',
+          date_updated: '2013/02/07'
         },
         {
           user_info_id: 169,
@@ -1870,10 +1870,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Daniels Morgan',
-          role: 'client',
-          status: 'active',
-          date_created: '8/19/2016',
-          date_updated: '8/19/2016'
+          role: 'therapist',
+          status: 'temporary',
+          date_created: '2013/05/21',
+          date_updated: '2013/05/21'
         },
         {
           user_info_id: 170,
@@ -1881,10 +1881,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Kerry Andrews',
-          role: 'admin',
+          role: 'client',
           status: 'hardlocked',
-          date_created: '7/17/2014',
-          date_updated: '7/17/2014'
+          date_created: '2013/08/08',
+          date_updated: '2013/08/08'
         },
         {
           user_info_id: 171,
@@ -1892,10 +1892,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lester Williamson',
-          role: 'therapist',
-          status: 'deactivated',
-          date_created: '7/3/2014',
-          date_updated: '7/3/2014'
+          role: 'admin',
+          status: 'active',
+          date_created: '2011/09/15',
+          date_updated: '2011/09/15'
         },
         {
           user_info_id: 172,
@@ -1904,9 +1904,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Schroeder Burke',
           role: 'admin',
-          status: 'softlocked',
-          date_created: '8/25/2016',
-          date_updated: '8/25/2016'
+          status: 'disabled',
+          date_created: '2016/05/29',
+          date_updated: '2016/05/29'
         },
         {
           user_info_id: 173,
@@ -1914,10 +1914,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Sybil Wall',
-          role: 'therapist',
-          status: 'temporary',
-          date_created: '12/7/2010',
-          date_updated: '12/7/2010'
+          role: 'admin',
+          status: 'disabled',
+          date_created: '2011/12/11',
+          date_updated: '2011/12/11'
         },
         {
           user_info_id: 174,
@@ -1925,10 +1925,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Celeste Howell',
-          role: 'reception',
-          status: 'disabled',
-          date_created: '4/22/2012',
-          date_updated: '4/22/2012'
+          role: 'client',
+          status: 'active',
+          date_created: '2015/06/02',
+          date_updated: '2015/06/02'
         },
         {
           user_info_id: 175,
@@ -1936,10 +1936,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Dean Porter',
-          role: 'reception',
-          status: 'temporary',
-          date_created: '6/18/2012',
-          date_updated: '6/18/2012'
+          role: 'client',
+          status: 'active',
+          date_created: '2012/11/19',
+          date_updated: '2012/11/19'
         },
         {
           user_info_id: 176,
@@ -1948,9 +1948,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Trujillo Caldwell',
           role: 'reception',
-          status: 'deactivated',
-          date_created: '10/12/2015',
-          date_updated: '10/12/2015'
+          status: 'hardlocked',
+          date_created: '2012/10/18',
+          date_updated: '2012/10/18'
         },
         {
           user_info_id: 177,
@@ -1958,10 +1958,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'England Vazquez',
-          role: 'reception',
-          status: 'temporary',
-          date_created: '5/30/2011',
-          date_updated: '5/30/2011'
+          role: 'therapist',
+          status: 'deactivated',
+          date_created: '2016/08/14',
+          date_updated: '2016/08/14'
         },
         {
           user_info_id: 178,
@@ -1969,10 +1969,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Abby Lamb',
-          role: 'therapist',
-          status: 'active',
-          date_created: '6/6/2015',
-          date_updated: '6/6/2015'
+          role: 'client',
+          status: 'temporary',
+          date_created: '2010/01/24',
+          date_updated: '2010/01/24'
         },
         {
           user_info_id: 179,
@@ -1980,10 +1980,10 @@ exports.seed = function(knex, Promise) {
           password:
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Myra Dickerson',
-          role: 'client',
-          status: 'disabled',
-          date_created: '5/13/2015',
-          date_updated: '5/13/2015'
+          role: 'admin',
+          status: 'temporary',
+          date_created: '2011/05/14',
+          date_updated: '2011/05/14'
         },
         {
           user_info_id: 180,
@@ -1992,9 +1992,9 @@ exports.seed = function(knex, Promise) {
             '$2a$05$GJxcEaX9xWOkdmgxtmrjP.HOgXANrY7/jJILNXUqs0WR6vqhB8jdW',
           display_name: 'Lola Blankenship',
           role: 'reception',
-          status: 'disabled',
-          date_created: '10/10/2011',
-          date_updated: '10/10/2011'
+          status: 'hardlocked',
+          date_created: '2013/02/10',
+          date_updated: '2013/02/10'
         }
       ])
     })
