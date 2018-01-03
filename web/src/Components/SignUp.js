@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T21:01:45+08:00
+ * @Last modified time: 2018-01-03T21:46:23+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -13,7 +13,7 @@ import Header from './Header'
 import { login } from '../Actions/AuthActions'
 import config from '../config'
 
-export default class Login extends Component {
+export default class SignUp extends Component {
   state = {}
   handleLogin = async e => {
     const data = {
@@ -66,7 +66,7 @@ export default class Login extends Component {
             />
           </div>
           <button className="ui button" type="submit">
-            login
+            Sign Up
           </button>
         </form>
       </div>

@@ -4,7 +4,7 @@
  * @Email:  junaralinsub2@gmail.com
  * @Filename: Login.js
  * @Last modified by:   Junar B. Alinsub
- * @Last modified time: 2018-01-03T21:02:32+08:00
+ * @Last modified time: 2018-01-03T21:46:41+08:00
  * @License: MIT
  * @Copyright: use it however you like, just buy me coffee next time
  */
@@ -69,7 +69,7 @@ export default class Login extends Component {
             <a href={`${config.web}/ForgotPassword`}>Forgot Password</a>
           </p>
           <button className="ui button" type="submit">
-            login
+            Login
           </button>
         </form>
       </div>
